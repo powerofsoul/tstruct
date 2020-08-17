@@ -6,6 +6,7 @@
   "scripts": {
     "prepare": "rm -rf ./dist && cti ./src --fileexcludes *.spec.ts && npm run build && npm run build:types ",
     "build:types": "tsc -d",
+    "build:docs": "typedoc --out ./dist/docs",
     "build": "tsc",
     "test": "jest",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand"
@@ -28,6 +29,7 @@
     "create-ts-index": "^1.13.3",
     "jest": "^26.4.0",
     "ts-jest": "^26.2.0",
+    "typedoc": "^0.18.0",
     "typescript": "^3.9.7"
   },
   "type": "tstruct"
