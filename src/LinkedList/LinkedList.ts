@@ -26,8 +26,8 @@ export class LinkedList<T> implements Iterable<T> {
         this._length++;
     }
 
-    private getNode(index: number ): Node<T> {
-        if(index < 0 || index >= this.length) {
+    private getNode(index: number): Node<T> {
+        if (index < 0 || index >= this.length) {
             return undefined;
         }
 
@@ -47,7 +47,12 @@ export class LinkedList<T> implements Iterable<T> {
     }
 
     public remove(index: number) {
-        if (index == 0) {
+        if (index < 0 || index >= this.length || this.length == 0) return;
+        
+        if (index == 0 && this.length == 1) {
+            this._head = undefined;
+            this._tail = undefined;
+        } else if (index == 0) {
             this._head = this._head?.next;
         } else if (index == this._length - 1) {
             const node = this.getNode(index - 1);
@@ -80,9 +85,9 @@ export class LinkedList<T> implements Iterable<T> {
                     };
                 } else {
                     return {
-                        done: true, 
-                        value: null
-                    }
+                        done: true,
+                        value: null,
+                    };
                 }
             },
         };
