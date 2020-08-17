@@ -1,10 +1,10 @@
 {
   "name": "tstruct",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "prepare": "rm -rf ./dist && cti ./src && npm run build && npm run build:types ",
+    "prepare": "rm -rf ./dist && cti ./src --fileexcludes *.spec.ts && npm run build && npm run build:types ",
     "build:types": "tsc -d",
     "build": "tsc",
     "test": "jest",
