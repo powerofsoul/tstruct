@@ -1,0 +1,42 @@
+import { LinkedList } from "./LinkedList";
+
+describe("LinkedList tests", ()=> {
+    let linkedList: LinkedList<number>;
+
+    beforeEach(()=> {
+        linkedList = new LinkedList<number>();
+    });
+
+    it("Item is added to list", () => {
+        expect(linkedList.length).toBe(0);
+        linkedList.add(1);
+        expect(linkedList.length).toBe(1);
+        linkedList.add(2);
+        expect(linkedList.get(0)).toBe(1);
+        expect(linkedList.get(1)).toBe(2);
+    })
+
+    it("Can loop on list", () => {
+        linkedList.add(3);
+        linkedList.add(4);
+        linkedList.add(-1);
+
+        const result = [];
+        for(let e of linkedList){
+            result.push(e);
+        }
+
+        expect(result).toStrictEqual([3,4,-1]);
+    })
+
+    it("I can remove element", () => {
+        linkedList.add(4);
+        linkedList.add(5);
+
+        linkedList.remove(0);
+        expect(linkedList.get(0)).toBe(5);
+
+        linkedList.add(6);
+        expect(linkedList.get(1)).toBe(6);
+    })
+})
