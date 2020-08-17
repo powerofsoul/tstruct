@@ -26,7 +26,11 @@ export class LinkedList<T> implements Iterable<T> {
         this._length++;
     }
 
-    private getNode(index: number): Node<T> {
+    private getNode(index: number ): Node<T> {
+        if(index < 0 || index >= this.length) {
+            return undefined;
+        }
+
         let currentIndex = 0;
         let currentNode = this._head;
 
