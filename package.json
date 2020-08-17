@@ -1,13 +1,18 @@
 {
   "name": "tstruct",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
+    "prepare": "rm -rf ./dist && cti ./src && npm run build && npm run build:types ",
+    "build:types": "tsc -d",
     "build": "tsc",
     "test": "jest",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/powerofsoul/tstruct.git"
@@ -19,6 +24,8 @@
   },
   "homepage": "https://github.com/powerofsoul/tstruct#readme",
   "devDependencies": {
+    "create-index": "^2.6.0",
+    "create-ts-index": "^1.13.3",
     "jest": "^26.4.0",
     "ts-jest": "^26.2.0",
     "typescript": "^3.9.7"
