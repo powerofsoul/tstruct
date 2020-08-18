@@ -3,6 +3,10 @@ import { LinkedList } from "../LinkedList/LinkedList";
 export interface IQueue<T> {
     enqueue(item: T): void;
     dequeue(): T;
+    peek(): T;
+
+    readonly size: number;
+    readonly isEmpty: boolean;
 }
 
 export class Queue<T> implements IQueue<T> {
@@ -20,5 +24,17 @@ export class Queue<T> implements IQueue<T> {
         const val = this._list.get(0);
         this._list.remove(0);
         return val;
+    }
+
+    peek(): T {
+        return this._list.get(0);
+    }
+
+    get isEmpty(): boolean {
+        return this._list.size == 0;
+    }
+
+    get size(): number {
+        return this._list.size;
     }
 }
