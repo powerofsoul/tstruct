@@ -41,4 +41,19 @@ describe("Queue", ()=>{
         queue.dequeue();
         expect(queue.isEmpty).toBe(true);
     })
+
+    it("I can iterate queue", () => {
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(1);
+        queue.enqueue(-1);
+        queue.enqueue(123);
+
+        const arr = [];
+        for(let e of queue) {
+            arr.push(e);
+        }
+
+        expect(arr).toStrictEqual([2,3,1,-1, 123]);
+    })
 });

@@ -7,6 +7,8 @@ export interface IQueue<T> {
 
     readonly size: number;
     readonly isEmpty: boolean;
+
+    [Symbol.iterator](): Iterator<T, any, undefined>;
 }
 
 export class Queue<T> implements IQueue<T> {
@@ -36,5 +38,9 @@ export class Queue<T> implements IQueue<T> {
 
     get size(): number {
         return this._list.size;
+    }
+
+    [Symbol.iterator](): Iterator<T, any, undefined> {
+        return this._list[Symbol.iterator]();
     }
 }
