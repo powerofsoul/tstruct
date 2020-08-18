@@ -11,6 +11,7 @@ interface ILinkedList<T> {
     add(val: T): void;
     remove(index: number): void;
     get(index: number): T;
+    readonly size: number;
 }
 
 export class LinkedList<T> implements ILinkedList<T>, Iterable<T> {
@@ -33,7 +34,7 @@ export class LinkedList<T> implements ILinkedList<T>, Iterable<T> {
     }
 
     private getNode(index: number): Node<T> {
-        if (index < 0 || index >= this.length) {
+        if (index < 0 || index >= this.size) {
             return undefined;
         }
 
@@ -53,9 +54,9 @@ export class LinkedList<T> implements ILinkedList<T>, Iterable<T> {
     }
 
     public remove(index: number) {
-        if (index < 0 || index >= this.length || this.length == 0) return;
+        if (index < 0 || index >= this.size || this.size == 0) return;
 
-        if (index == 0 && this.length == 1) {
+        if (index == 0 && this.size == 1) {
             this._head = undefined;
             this._tail = undefined;
         } else if (index == 0) {
@@ -72,7 +73,7 @@ export class LinkedList<T> implements ILinkedList<T>, Iterable<T> {
         this._length--;
     }
 
-    public get length(): number {
+    public get size(): number {
         return this._length;
     }
 
