@@ -12,6 +12,7 @@ interface ILinkedList<T> {
     remove(index: number): void;
     get(index: number): T;
     readonly size: number;
+    [Symbol.iterator](): Iterator<T, any, undefined>;
 }
 
 export class LinkedList<T> implements ILinkedList<T>, Iterable<T> {
