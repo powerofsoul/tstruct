@@ -8,9 +8,9 @@ describe("LinkedList tests", ()=> {
     });
 
     it("Item is added to list", () => {
-        expect(linkedList.length).toBe(0);
+        expect(linkedList.size).toBe(0);
         linkedList.add(1);
-        expect(linkedList.length).toBe(1);
+        expect(linkedList.size).toBe(1);
         linkedList.add(2);
         expect(linkedList.get(0)).toBe(1);
         expect(linkedList.get(1)).toBe(2);
@@ -50,11 +50,11 @@ describe("LinkedList tests", ()=> {
     it("List will not change if index is invalid", () => {
         linkedList.add(3);
         linkedList.remove(-1);
-        expect(linkedList.length).toBe(1);
+        expect(linkedList.size).toBe(1);
         expect(linkedList.get(0)).toBe(3);
 
         linkedList.remove(1);
-        expect(linkedList.length).toBe(1);
+        expect(linkedList.size).toBe(1);
         expect(linkedList.get(0)).toBe(3);
     })
 })
