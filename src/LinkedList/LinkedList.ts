@@ -1,10 +1,10 @@
-export interface Node<T> {
+export interface LinkedListNode<T> {
     val: T;
-    next?: Node<T>;
+    next?: LinkedListNode<T>;
 }
 
-export class Node<T> implements Node<T> {
-    constructor(public val: T, public next?: Node<T>) {}
+export class LinkedListNode<T> implements LinkedListNode<T> {
+    constructor(public val: T, public next?: LinkedListNode<T>) {}
 }
 
 interface ILinkedList<T> {
@@ -16,12 +16,12 @@ interface ILinkedList<T> {
 }
 
 export class LinkedList<T> implements ILinkedList<T>, Iterable<T> {
-    private _head: Node<T>;
-    private _tail: Node<T>;
+    private _head: LinkedListNode<T>;
+    private _tail: LinkedListNode<T>;
     private _length: number = 0;
 
     public add(val: T): void {
-        const node = new Node(val);
+        const node = new LinkedListNode(val);
 
         if (!this._head) {
             this._head = node;
@@ -34,7 +34,7 @@ export class LinkedList<T> implements ILinkedList<T>, Iterable<T> {
         this._length++;
     }
 
-    private getNode(index: number): Node<T> {
+    private getNode(index: number): LinkedListNode<T> {
         if (index < 0 || index >= this.size) {
             return undefined;
         }

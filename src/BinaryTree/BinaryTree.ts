@@ -1,15 +1,15 @@
 import { Queue } from "../Queue/Queue";
 
-export interface INode<T> {
+export interface BinaryTreeNode<T> {
     val: T;
-    left: INode<T>;
-    right: INode<T>;
+    left: BinaryTreeNode<T>;
+    right: BinaryTreeNode<T>;
 }
 
-export class Node<T> implements INode<T> {
+export class BinaryTreeNode<T> implements BinaryTreeNode<T> {
     val: T;
-    left: INode<T>;
-    right: INode<T>;
+    left: BinaryTreeNode<T>;
+    right: BinaryTreeNode<T>;
 
     constructor(value: T){
         this.val = value;
@@ -17,22 +17,22 @@ export class Node<T> implements INode<T> {
 }
 
 export interface IBinaryTree<T> {
-    readonly head: INode<T>;
+    readonly head: BinaryTreeNode<T>;
     add(value: T): void;
 }
 
 export class BinaryTree<T> implements IBinaryTree<T> {
-    private _head: INode<T>;
+    private _head: BinaryTreeNode<T>;
 
-    public get head(): INode<T> {
+    public get head(): BinaryTreeNode<T> {
         return this._head;
     } 
 
     public add(value: T) {
         if(!this._head) {
-            this._head = new Node<T>(value)
+            this._head = new BinaryTreeNode<T>(value)
         } else {
-            const queue = new Queue<Node<T>>();
+            const queue = new Queue<BinaryTreeNode<T>>();
             queue.enqueue(this._head);
             let foundSpot = false;
             
@@ -41,10 +41,10 @@ export class BinaryTree<T> implements IBinaryTree<T> {
                 
                 if(!currentElement.left) {
                     foundSpot = true;
-                    currentElement.left = new Node(value);
+                    currentElement.left = new BinaryTreeNode(value);
                 } else if(!currentElement.right) {
                     foundSpot = true;
-                    currentElement.right = new Node(value);
+                    currentElement.right = new BinaryTreeNode(value);
                 } else {
                     queue.enqueue(currentElement.left);
                     queue.enqueue(currentElement.right);
