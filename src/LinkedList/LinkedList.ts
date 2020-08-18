@@ -7,7 +7,13 @@ export class Node<T> implements Node<T> {
     constructor(public val: T, public next?: Node<T>) {}
 }
 
-export class LinkedList<T> implements Iterable<T> {
+interface ILinkedList<T> {
+    add(val: T): void;
+    remove(index: number): void;
+    get(index: number): T;
+}
+
+export class LinkedList<T> implements ILinkedList<T>, Iterable<T> {
     private _head: Node<T>;
     private _tail: Node<T>;
     private _length: number = 0;
@@ -27,6 +33,10 @@ export class LinkedList<T> implements Iterable<T> {
     }
 
     private getNode(index: number): Node<T> {
+        if (index < 0 || index >= this.length) {
+            return undefined;
+        }
+
         let currentIndex = 0;
         let currentNode = this._head;
 
@@ -43,7 +53,12 @@ export class LinkedList<T> implements Iterable<T> {
     }
 
     public remove(index: number) {
-        if (index == 0) {
+        if (index < 0 || index >= this.length || this.length == 0) return;
+
+        if (index == 0 && this.length == 1) {
+            this._head = undefined;
+            this._tail = undefined;
+        } else if (index == 0) {
             this._head = this._head?.next;
         } else if (index == this._length - 1) {
             const node = this.getNode(index - 1);
@@ -76,9 +91,9 @@ export class LinkedList<T> implements Iterable<T> {
                     };
                 } else {
                     return {
-                        done: true, 
-                        value: null
-                    }
+                        done: true,
+                        value: null,
+                    };
                 }
             },
         };

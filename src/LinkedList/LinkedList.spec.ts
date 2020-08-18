@@ -39,4 +39,22 @@ describe("LinkedList tests", ()=> {
         linkedList.add(6);
         expect(linkedList.get(1)).toBe(6);
     })
+
+    it("I can remove first item and list will be empty", () => {
+        linkedList.add(1);
+        expect(linkedList.get(0)).toBe(1);
+        linkedList.remove(0);
+        expect(linkedList.get(0)).toBeUndefined();
+    })
+
+    it("List will not change if index is invalid", () => {
+        linkedList.add(3);
+        linkedList.remove(-1);
+        expect(linkedList.length).toBe(1);
+        expect(linkedList.get(0)).toBe(3);
+
+        linkedList.remove(1);
+        expect(linkedList.length).toBe(1);
+        expect(linkedList.get(0)).toBe(3);
+    })
 })
