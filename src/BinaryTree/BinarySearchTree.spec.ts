@@ -1,0 +1,27 @@
+import { BinarySearchTree } from "./BinarySearchTree";
+import { IBinaryTree } from "./BinaryTree";
+
+describe("Binary Search Tree Tests", () => {
+    let bst: IBinaryTree<number>;
+    
+    beforeEach(()=>{
+        bst = new BinarySearchTree<number>();
+    });
+
+    it("Values are added to the correct spot", () => {
+        bst.add(3);
+        bst.add(5);
+        bst.add(1);
+        bst.add(33);
+
+        expect(bst.head.val).toBe(3);
+        expect(bst.head.left.val).toBe(1);
+
+        expect(bst.head.right.val).toBe(5);
+        expect(bst.head.right.right.val).toBe(33);
+        expect(bst.head.right.left).toBeUndefined();
+
+        expect(bst.head.left.left).toBeUndefined();
+        expect(bst.head.left.right).toBeUndefined();
+    })
+})

@@ -1,12 +1,12 @@
 import { Queue } from "../Queue/Queue";
 
-export interface BinaryTreeNode<T> {
+export interface IBinaryTreeNode<T> {
     val: T;
     left: BinaryTreeNode<T>;
     right: BinaryTreeNode<T>;
 }
 
-export class BinaryTreeNode<T> implements BinaryTreeNode<T> {
+export class BinaryTreeNode<T> implements IBinaryTreeNode<T> {
     val: T;
     left: BinaryTreeNode<T>;
     right: BinaryTreeNode<T>;
@@ -22,7 +22,7 @@ export interface IBinaryTree<T> {
 }
 
 export class BinaryTree<T> implements IBinaryTree<T> {
-    private _head: BinaryTreeNode<T>;
+    protected _head: BinaryTreeNode<T>;
 
     public get head(): BinaryTreeNode<T> {
         return this._head;
