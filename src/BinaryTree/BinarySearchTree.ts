@@ -28,6 +28,7 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
 
     public get min() {
         let currentNode = this.head;
+
         while(currentNode.left) {
             currentNode=currentNode.left;
         }
@@ -45,13 +46,15 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
     }
 
     private insertNode(value: T, node: BinaryTreeNode<T>=this.head) {
-        if(this.compareFunction(node.val, value) >=0 && !node.left) {
-            node.left = new BinaryTreeNode(value);
-        } else if(this.compareFunction(node.val, value) >=0) {
+        const compareResult = this.compareFunction(node.val, value);
+
+        if(compareResult > 0 && !node.left) {
+            node.left = new BinaryTreeNode(value, node);
+        } else if(compareResult > 0) {
             this.insertNode(value, node.left);
-        } else if(!node.right) {
-            node.right = new BinaryTreeNode(value);
-        } else {
+        } else if(compareResult < 0 && !node.right) {
+            node.right = new BinaryTreeNode(value, node);
+        } else if(compareResult < 0) {
             this.insertNode(value, node.right);
         }
     }

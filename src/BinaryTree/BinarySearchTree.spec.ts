@@ -35,4 +35,12 @@ describe("Binary Search Tree Tests", () => {
         expect(bst.min).toBe(-987);
         expect(bst.max).toBe(99);
     })
+
+    it("It is not possible to have duplicate vals", () => {
+        bst.add(1);
+        bst.add(1);
+
+        expect(bst.head.left).toBeUndefined();
+        expect(bst.head.right).toBeUndefined();
+    })
 })
