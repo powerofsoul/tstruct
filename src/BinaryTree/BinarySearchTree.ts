@@ -5,7 +5,19 @@ export interface IBinarySearchTree<T> extends IBinaryTree<T> {
     readonly max: T;
 }
 
+type CompareFunctionType<T> = (a: T, b :T)=> 1 | 0 | -1;
+
 export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchTree<T> {
+    
+    private compareFunction: CompareFunctionType<T> = (a, b) => a==b ? 0 : a>b ? 1 : -1;
+
+    constructor(compareFunction?: CompareFunctionType<T>) {
+        super()
+        if(compareFunction) {
+            this.compareFunction=compareFunction;
+        }
+    }
+
     public add(value: T) {
         if(!this._head) {
             this._head = new BinaryTreeNode<T>(value)
@@ -33,9 +45,9 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
     }
 
     private insertNode(value: T, node: BinaryTreeNode<T>=this.head) {
-        if(node.val > value && !node.left) {
+        if(this.compareFunction(node.val, value) >=0 && !node.left) {
             node.left = new BinaryTreeNode(value);
-        } else if(node.val > value) {
+        } else if(this.compareFunction(node.val, value) >=0) {
             this.insertNode(value, node.left);
         } else if(!node.right) {
             node.right = new BinaryTreeNode(value);
