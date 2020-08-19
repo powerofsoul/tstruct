@@ -1,8 +1,8 @@
-import { BinarySearchTree } from "./BinarySearchTree";
+import { BinarySearchTree, IBinarySearchTree} from "./BinarySearchTree";
 import { IBinaryTree } from "./BinaryTree";
 
 describe("Binary Search Tree Tests", () => {
-    let bst: IBinaryTree<number>;
+    let bst: IBinarySearchTree<number>;
     
     beforeEach(()=>{
         bst = new BinarySearchTree<number>();
@@ -23,5 +23,16 @@ describe("Binary Search Tree Tests", () => {
 
         expect(bst.head.left.left).toBeUndefined();
         expect(bst.head.left.right).toBeUndefined();
+    })
+
+    it("Min, max value are correct", ()=>{
+        bst.add(3);
+        bst.add(5);
+        bst.add(99);
+        bst.add(-987);
+        bst.add(1);
+
+        expect(bst.min).toBe(-987);
+        expect(bst.max).toBe(99);
     })
 })
