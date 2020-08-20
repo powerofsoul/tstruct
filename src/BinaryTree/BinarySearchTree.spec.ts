@@ -53,4 +53,13 @@ describe("Binary Search Tree Tests", () => {
         bst.add(4);
         expect(bst.head.isBalanced()).toBe(false);
     })
+
+    it("Array version matches the tree", () => {
+        bst.add(1);
+        bst.add(2);
+        bst.add(3);
+        bst.add(-1);
+
+        expect(bst.toArray()).toStrictEqual([1, -1, 2, 3]);
+    })
 })

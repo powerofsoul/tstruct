@@ -56,6 +56,7 @@ export class BinaryTreeNode<T> implements IBinaryTreeNode<T> {
 export interface IBinaryTree<T> {
     readonly head?: BinaryTreeNode<T>;
     add(value: T): void;
+    toArray(): T[];
 }
 
 export class BinaryTree<T> implements IBinaryTree<T> {
@@ -88,5 +89,28 @@ export class BinaryTree<T> implements IBinaryTree<T> {
                 }
             }
         }
+    }
+
+    public toArray() {
+        if(!this.head) return [];
+
+        const result = [];
+        const queue = new Queue<IBinaryTreeNode<T>>();
+        queue.enqueue(this.head);
+
+        while(!queue.isEmpty) {
+            const node = queue.dequeue();
+            result.push(node.val);
+
+            if(node.left){
+                queue.enqueue(node.left);
+            }
+
+            if(node.right){
+                queue.enqueue(node.right);
+            }
+        }
+
+        return result;
     }
 }

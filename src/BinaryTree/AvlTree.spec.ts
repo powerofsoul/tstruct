@@ -23,4 +23,13 @@ describe("AVL Tree tests", () => {
             expect(avlTree.head.isBalanced()).toBe(true);
         }
     );
+
+    it("Array version matches the tree", () => {
+        avlTree.add(1);
+        avlTree.add(2);
+        avlTree.add(3);
+        avlTree.add(-1);
+
+        expect(avlTree.toArray()).toStrictEqual([2, 1, 3, -1]);
+    })
 });

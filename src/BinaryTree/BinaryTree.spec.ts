@@ -23,4 +23,13 @@ describe("Binary Tree tests", () => {
         expect(binaryTree.head.left.val).toBe(-1);
         expect(binaryTree.head.right.val).toBe(99);
     })
+
+    it("Array version matches the tree", () => {
+        binaryTree.add(1);
+        binaryTree.add(2);
+        binaryTree.add(3);
+        binaryTree.add(4);
+
+        expect(binaryTree.toArray()).toStrictEqual([1,2,3,4]);
+    })
 });
