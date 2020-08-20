@@ -1,4 +1,4 @@
-import { BinaryTree, BinaryTreeNode, IBinaryTree } from "./BinaryTree";
+import { BinaryTree, BinaryTreeNode, IBinaryTree, IBinaryTreeNode } from "./BinaryTree";
 
 export interface IBinarySearchTree<T> extends IBinaryTree<T> {
     readonly min: T | undefined;
@@ -17,11 +17,11 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
         }
     }
 
-    public add(value: T) {
+    public add(value: T, callback: (node: IBinaryTreeNode<T>) => void = ()=>{}) {
         if(!this._head) {
             this._head = new BinaryTreeNode<T>(value)
         } else {
-            this.insertNode(value, this._head)
+            this.insertNode(value, this._head, callback)
         }
     }
 
@@ -48,7 +48,7 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
         return currentNode.val;
     }
 
-    private insertNode(value: T, node: BinaryTreeNode<T>) {
+    protected insertNode(value: T, node: IBinaryTreeNode<T>, callback: (node: IBinaryTreeNode<T>) => void = ()=>{}) {
         const compareResult = this.compareFunction(node.val, value);
 
         if(compareResult > 0 && !node.left) {
@@ -60,5 +60,7 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
         } else if(compareResult < 0 && node.right) {
             this.insertNode(value, node.right);
         }
+
+        callback?.(node);
     }
 }
