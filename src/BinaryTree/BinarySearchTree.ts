@@ -26,6 +26,10 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
         }
     }
 
+    public delete(value: T) {
+        throw "Not Implemented Yet";
+    }
+
     public get min() {
         if(!this.head) return undefined;
 

@@ -5,6 +5,8 @@ export interface IBinaryTreeNode<T> {
     left?: IBinaryTreeNode<T>;
     right?: IBinaryTreeNode<T>;
     parent?: IBinaryTreeNode<T>;
+    parentSide(): "left" | "right";
+
     copyTo(node?: IBinaryTreeNode<T>): void;
     height(): number;
     isBalanced():boolean;
@@ -36,6 +38,10 @@ export class BinaryTreeNode<T> implements IBinaryTreeNode<T> {
         return Math.max(leftHeight, rightHeight) + 1;
     }
 
+    public parentSide() {
+        return this.parent?.right?.val == this.val ? "right" : "left";
+    }
+
     public isBalanced() {
         return Math.abs(this.height(this.left ?? null)-this.height(this.right ?? null)) <= 1;
     }
@@ -59,6 +65,7 @@ export interface IBinaryTree<T> {
     toArray(): T[];
     findNode(value: T): IBinaryTreeNode<T> | undefined;
     valueExists(value: T): boolean;
+    remove(value: T): void;
 }
 
 export class BinaryTree<T> implements IBinaryTree<T> {
@@ -91,6 +98,34 @@ export class BinaryTree<T> implements IBinaryTree<T> {
                 }
             }
         }
+    }
+
+    public remove(value: T) {
+        const node = this.findNode(value);
+        if(node) {
+            
+            let bottomNode: IBinaryTreeNode<T>;
+
+            if(node.left) {
+                bottomNode = this.findBottomNode(node.left);
+            } else {
+                bottomNode = this.findBottomNode(node.right);
+            }
+
+            if(bottomNode) {
+                const bottomNodeParentSide = bottomNode.parentSide();
+                bottomNode.parent[bottomNodeParentSide] = undefined;
+                node.val = bottomNode.val;
+            } else {
+                const parentSide = node.parentSide();
+                node.parent[parentSide] = undefined;
+            }
+        }
+    }
+
+    private findBottomNode(node: IBinaryTreeNode<T>): IBinaryTreeNode<T> {
+        if(node.left) return this.findBottomNode(node.left);
+        return node;
     }
 
     public toArray() {

@@ -50,8 +50,36 @@ describe("Binary Tree tests", () => {
             value: number;
             exists: boolean;
         }) => {
-            tree.forEach((e) => {binaryTree.add(e)});;
+            tree.forEach((e) => {
+                binaryTree.add(e);
+            });
             expect(binaryTree.valueExists(value)).toBe(exists);
+        }
+    );
+
+    it.each`
+        tree                  | value | afterDeletionTree
+        ${[1, 2, 3, 4, 5, 6]} | ${1}  | ${[2, 3, 4, 5, 6]}
+        ${[9, 7, 1, -2, 3]}   | ${7}  | ${[9, 1, -2, 3]}
+        ${[1, 2, 3, 4, 5, 6]} | ${1}  | ${[2, 3, 4, 5, 6]}
+        ${[0, 9, 99, -1, 33]} | ${3}  | ${[0, 9, 99, -1, 33]}
+    `(
+        "Value $value is delete from $tree and three becomes $afterDeletionTree",
+        ({
+            tree,
+            value,
+            afterDeletionTree,
+        }: {
+            tree: number[];
+            value: number;
+            afterDeletionTree: number[];
+        }) => {
+            tree.forEach((e) => {
+                binaryTree.add(e);
+            });
+
+            binaryTree.remove(value);
+            expect(binaryTree.toArray().sort()).toStrictEqual(afterDeletionTree.sort());
         }
     );
 });
