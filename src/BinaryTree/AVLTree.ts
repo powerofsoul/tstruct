@@ -27,6 +27,10 @@ export class AVLTree<T> extends BinarySearchTree<T> {
                 this.rightLeftRotate(node);
             }
         }
+
+        if(node.parent){
+            this.balanceNode(node.parent);
+        }
     }
 
     public leftRotate(node: IBinaryTreeNode<T>) {

@@ -21,7 +21,8 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
         if(!this._head) {
             this._head = new BinaryTreeNode<T>(value)
         } else {
-            this.insertNode(value, this._head, callback)
+           const newNode = this.insertNode(value, this._head);
+           callback?.(newNode);
         }
     }
 
@@ -48,19 +49,19 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
         return currentNode.val;
     }
 
-    protected insertNode(value: T, node: IBinaryTreeNode<T>, callback: (node: IBinaryTreeNode<T>) => void = ()=>{}) {
+    protected insertNode(value: T, node: IBinaryTreeNode<T>): IBinaryTreeNode<T> {
         const compareResult = this.compareFunction(node.val, value);
 
         if(compareResult > 0 && !node.left) {
             node.left = new BinaryTreeNode(value, node);
+            return node.left;
         } else if(compareResult > 0 && node.left) {
-            this.insertNode(value, node.left);
+            return this.insertNode(value, node.left);
         } else if(compareResult < 0 && !node.right) {
             node.right = new BinaryTreeNode(value, node);
+            return node.right;
         } else if(compareResult < 0 && node.right) {
-            this.insertNode(value, node.right);
+            return this.insertNode(value, node.right);
         }
-
-        callback?.(node);
     }
 }
