@@ -54,15 +54,17 @@ export class BinaryTreeNode<T> implements IBinaryTreeNode<T> {
 }
 
 export interface IBinaryTree<T> {
-    readonly head?: BinaryTreeNode<T>;
+    readonly head?: IBinaryTreeNode<T>;
     add(value: T): void;
     toArray(): T[];
+    findNode(value: T): IBinaryTreeNode<T> | undefined;
+    valueExists(value: T): boolean;
 }
 
 export class BinaryTree<T> implements IBinaryTree<T> {
-    protected _head: BinaryTreeNode<T>;
+    protected _head: IBinaryTreeNode<T>;
 
-    public get head(): BinaryTreeNode<T> {
+    public get head(): IBinaryTreeNode<T> {
         return this._head;
     }
 
@@ -112,5 +114,23 @@ export class BinaryTree<T> implements IBinaryTree<T> {
         }
 
         return result;
+    }
+
+    public findNode(value: T, node = this.head): IBinaryTreeNode<T> {
+        if(!node) return;
+
+        if(node.val == value) {
+            return node;
+        }
+
+        const left = this.findNode(value, node.left ?? null);
+        if(left) return left;
+
+        const right = this.findNode(value, node.right ?? null);
+        return right;
+    }
+    
+    public valueExists(value: T): boolean {
+        return this.findNode(value) != undefined;
     }
 }
