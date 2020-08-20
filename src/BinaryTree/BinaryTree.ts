@@ -2,17 +2,19 @@ import { Queue } from "../Queue/Queue";
 
 export interface IBinaryTreeNode<T> {
     val: T;
-    left: IBinaryTreeNode<T>;
-    right: IBinaryTreeNode<T>;
-    parent: IBinaryTreeNode<T>;
+    left?: IBinaryTreeNode<T>;
+    right?: IBinaryTreeNode<T>;
+    parent?: IBinaryTreeNode<T>;
     copyTo(node?: IBinaryTreeNode<T>): void;
+    height(): number;
+    isBalanced():boolean;
 }
 
 export class BinaryTreeNode<T> implements IBinaryTreeNode<T> {
     val: T;
-    left: IBinaryTreeNode<T>;
-    right: IBinaryTreeNode<T>;
-    parent: IBinaryTreeNode<T>;
+    left?: IBinaryTreeNode<T>;
+    right?: IBinaryTreeNode<T>;
+    parent?: IBinaryTreeNode<T>;
 
     public copyTo(node?: IBinaryTreeNode<T>) {
         if(!node) return;
@@ -21,6 +23,21 @@ export class BinaryTreeNode<T> implements IBinaryTreeNode<T> {
         node.left=this.left;
         node.right=this.right;
         node.parent=this.parent;
+    }
+
+    public height(node: IBinaryTreeNode<T> = this): number {
+        if (!node) {
+            return 0;
+        }
+
+        const leftHeight = this.height(node.left || null);
+        const rightHeight = this.height(node.right || null);
+
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
+
+    public isBalanced() {
+        return Math.abs(this.height(this.left ?? null)-this.height(this.right ?? null)) <= 1;
     }
 
     constructor(
@@ -37,7 +54,7 @@ export class BinaryTreeNode<T> implements IBinaryTreeNode<T> {
 }
 
 export interface IBinaryTree<T> {
-    readonly head: BinaryTreeNode<T>;
+    readonly head?: BinaryTreeNode<T>;
     add(value: T): void;
 }
 

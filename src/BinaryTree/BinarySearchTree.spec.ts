@@ -43,4 +43,14 @@ describe("Binary Search Tree Tests", () => {
         expect(bst.head.left).toBeUndefined();
         expect(bst.head.right).toBeUndefined();
     })
+
+    it("Tree is unbalanced", () => {
+        bst.add(1);
+        bst.add(2);
+        expect(bst.head.isBalanced()).toBe(true);
+        bst.add(3);
+        expect(bst.head.isBalanced()).toBe(false);
+        bst.add(4);
+        expect(bst.head.isBalanced()).toBe(false);
+    })
 })

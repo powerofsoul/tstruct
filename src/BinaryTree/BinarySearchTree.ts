@@ -1,15 +1,14 @@
 import { BinaryTree, BinaryTreeNode, IBinaryTree } from "./BinaryTree";
 
 export interface IBinarySearchTree<T> extends IBinaryTree<T> {
-    readonly min: T;
-    readonly max: T;
+    readonly min: T | undefined;
+    readonly max: T | undefined;
 }
 
 type CompareFunctionType<T> = (a: T, b :T)=> 1 | 0 | -1;
 
 export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchTree<T> {
-    
-    private compareFunction: CompareFunctionType<T> = (a, b) => a==b ? 0 : a>b ? 1 : -1;
+    protected compareFunction: CompareFunctionType<T> = (a, b) => a==b ? 0 : a>b ? 1 : -1;
 
     constructor(compareFunction?: CompareFunctionType<T>) {
         super()
@@ -22,11 +21,13 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
         if(!this._head) {
             this._head = new BinaryTreeNode<T>(value)
         } else {
-            this.insertNode(value)
+            this.insertNode(value, this._head)
         }
     }
 
     public get min() {
+        if(!this.head) return undefined;
+
         let currentNode = this.head;
 
         while(currentNode.left) {
@@ -37,6 +38,8 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
     }
 
     public get max() {
+        if(!this.head) return undefined;
+
         let currentNode = this.head;
         while(currentNode.right) {
             currentNode=currentNode.right;
@@ -45,16 +48,16 @@ export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchT
         return currentNode.val;
     }
 
-    private insertNode(value: T, node: BinaryTreeNode<T>=this.head) {
+    private insertNode(value: T, node: BinaryTreeNode<T>) {
         const compareResult = this.compareFunction(node.val, value);
 
         if(compareResult > 0 && !node.left) {
             node.left = new BinaryTreeNode(value, node);
-        } else if(compareResult > 0) {
+        } else if(compareResult > 0 && node.left) {
             this.insertNode(value, node.left);
         } else if(compareResult < 0 && !node.right) {
             node.right = new BinaryTreeNode(value, node);
-        } else if(compareResult < 0) {
+        } else if(compareResult < 0 && node.right) {
             this.insertNode(value, node.right);
         }
     }
