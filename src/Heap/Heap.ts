@@ -1,6 +1,6 @@
 import { descendingCompareFunction, ascendingCompareFunction } from "../CompareFunction";
 
-interface IHeap<T> {
+export interface IHeap<T> {
     add(value: T): void;
     remove(value: T): void;
     getRoot(): T;
@@ -9,6 +9,7 @@ interface IHeap<T> {
     toArray(): T[];
 
     readonly size: number;
+    [Symbol.iterator](): Iterator<T, any, undefined>;
 }
 
 export interface IMaxHeap<T> extends IHeap<T> {
@@ -21,7 +22,7 @@ export interface IMinHeap<T> extends IHeap<T> {
     getMin(): T;
 }
 
-class Heap<T> implements IHeap<T> {
+export class Heap<T> implements IHeap<T> {
     private _data: T[];
     public get size() {
         return this._data.length;
@@ -108,6 +109,10 @@ class Heap<T> implements IHeap<T> {
 
     private getChildrenIndex(index: number) {
         return [index * 2 + 1, index * 2 + 2];
+    }
+
+    public [Symbol.iterator](): Iterator<T, any, undefined> {
+        return this._data[Symbol.iterator]();
     }
 
 }
