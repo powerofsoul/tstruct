@@ -1,14 +1,13 @@
 import { BinaryTree, BinaryTreeNode, IBinaryTree, IBinaryTreeNode } from "./BinaryTree";
+import { CompareFunctionType, descendingCompareFunction } from "../CompareFunction";
 
 export interface IBinarySearchTree<T> extends IBinaryTree<T> {
     readonly min: T | undefined;
     readonly max: T | undefined;
 }
 
-type CompareFunctionType<T> = (a: T, b :T)=> 1 | 0 | -1;
-
 export class BinarySearchTree<T> extends BinaryTree<T> implements IBinarySearchTree<T> {
-    protected compareFunction: CompareFunctionType<T> = (a, b) => a==b ? 0 : a>b ? 1 : -1;
+    protected compareFunction: CompareFunctionType<T> = descendingCompareFunction;
 
     constructor(compareFunction?: CompareFunctionType<T>) {
         super()
