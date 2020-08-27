@@ -52,8 +52,11 @@ export class Heap<T> implements IHeap<T> {
 
     public add(value: T): void {
         this._data.push(value);
+        if(this.size == 1) return;
+        
         let currentId = this.size - 1;
         let parentId = this.getParentIndex(this.size - 1);
+
         while (
             this.compareFunction(this._data[parentId], this._data[currentId]) <
                 0 &&
