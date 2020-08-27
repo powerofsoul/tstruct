@@ -23,7 +23,7 @@ export interface ILinkedList<T> {
 export class LinkedList<T> implements ILinkedList<T>, Iterable<T> {
     private _head: ILinkedListNode<T>;
     private _tail: ILinkedListNode<T>;
-    private _length: number = 0;
+    private _length = 0;
 
     public get head() {
         return this._head;

@@ -18,7 +18,7 @@ export class Stack<T> implements IStack<T> {
 
     public get isEmpty() {
         return this._list.isEmpty;
-    };
+    }
 
     public get size() {
         return this._list.size;

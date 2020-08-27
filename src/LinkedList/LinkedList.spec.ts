@@ -22,7 +22,7 @@ describe("LinkedList tests", ()=> {
         linkedList.add(-1);
 
         const result = [];
-        for(let e of linkedList){
+        for(const e of linkedList){
             result.push(e);
         }
 

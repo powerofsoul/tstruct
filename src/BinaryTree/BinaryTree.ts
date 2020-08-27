@@ -84,7 +84,7 @@ export class BinaryTree<T> implements IBinaryTree<T> {
             let foundSpot = false;
 
             while (!foundSpot) {
-                let currentElement = queue.dequeue();
+                const currentElement = queue.dequeue();
 
                 if (!currentElement.left) {
                     foundSpot = true;

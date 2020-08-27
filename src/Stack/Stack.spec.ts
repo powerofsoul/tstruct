@@ -1,7 +1,7 @@
 import { Stack, IStack } from "./Stack";
 
 describe("Stack tests", () => {
-    var stack: IStack<number>;
+    let stack: IStack<number>;
 
     beforeEach(() => {
         stack = new Stack<number>();

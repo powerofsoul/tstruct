@@ -50,7 +50,7 @@ describe("Queue", ()=>{
         queue.enqueue(123);
 
         const arr = [];
-        for(let e of queue) {
+        for(const e of queue) {
             arr.push(e);
         }
 
