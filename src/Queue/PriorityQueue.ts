@@ -15,7 +15,7 @@ export interface IPriorityQueue<T> {
 export class PriorityQueue<T> implements IPriorityQueue<T>{
     private _heap: IHeap<T>;
 
-    constructor(getPriority: (value: T) => number, compareFunction = descendingCompareFunction) {
+    constructor(getPriority: (value: T) => any, compareFunction = descendingCompareFunction) {
         const heapCompareFunction = (e:T , e2: T) => {
             const ePriority = getPriority(e);
             const e2Priority = getPriority(e2);
