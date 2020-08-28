@@ -90,7 +90,7 @@ export class Heap<T> implements IHeap<T> {
                 break;
             }
 
-            if(this.compareFunction(childrenValues[0], childrenValues[1]) > 0 || !childrenValues[1]) {
+            if(this.compareFunction(childrenValues[0], childrenValues[1]) > 0 || childrenValues[1] ==  undefined) {
                 this._data[children[0]] = this._data[index];
                 this._data[index] = childrenValues[0];
                 index=children[0];
