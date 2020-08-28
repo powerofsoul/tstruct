@@ -43,7 +43,7 @@ export class Heap<T> implements IHeap<T> {
 
     public extractRoot(): T {
         const root = this._data[0];
-        if(root) {
+        if(root != undefined) {
             this.remove(root);
         }
 
