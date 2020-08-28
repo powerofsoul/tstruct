@@ -1,4 +1,5 @@
 import { IMaxHeap, MaxHeap, IHeap, Heap } from "../Heap/Heap";
+import { descendingCompareFunction } from "..";
 
 export interface IPriorityQueue<T> {
     enqueue(item: T): void;
@@ -14,12 +15,12 @@ export interface IPriorityQueue<T> {
 export class PriorityQueue<T> implements IPriorityQueue<T>{
     private _heap: IHeap<T>;
 
-    constructor(getPriority: (value: T) => number) {
+    constructor(getPriority: (value: T) => number, compareFunction = descendingCompareFunction) {
         const heapCompareFunction = (e:T , e2: T) => {
             const ePriority = getPriority(e);
             const e2Priority = getPriority(e2);
 
-            return ePriority == e2Priority ? 0 : ePriority > e2Priority ? 1 : -1;
+            return compareFunction(ePriority, e2Priority);
         }
         this._heap = new Heap(heapCompareFunction);
     }
