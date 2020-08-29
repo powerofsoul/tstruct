@@ -1,3 +1,7 @@
+[tstruct](README.md) › [Globals](globals.md)
+
+# tstruct
+
 # tstruct
 [![Build Status](https://travis-ci.org/powerofsoul/tstruct.svg?branch=master)](https://travis-ci.org/powerofsoul/tstruct)
 
@@ -27,4 +31,3 @@ npm install tstruct
 - Quick Sort
 - Heap Sort
 - Radix Sort
-
