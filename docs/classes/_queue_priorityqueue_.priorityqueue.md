@@ -42,7 +42,7 @@
 
 \+ **new PriorityQueue**(`getPriority`: function, `compareFunction`: [CompareFunctionType](../modules/_comparefunction_.md#comparefunctiontype)‹any›): *[PriorityQueue](_queue_priorityqueue_.priorityqueue.md)*
 
-*Defined in [Queue/PriorityQueue.ts:16](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L16)*
+*Defined in [Queue/PriorityQueue.ts:16](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L16)*
 
 **Parameters:**
 
@@ -66,7 +66,7 @@ Name | Type |
 
 • **_heap**: *[IHeap](../interfaces/_heap_heap_.iheap.md)‹T›*
 
-*Defined in [Queue/PriorityQueue.ts:16](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L16)*
+*Defined in [Queue/PriorityQueue.ts:16](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L16)*
 
 ## Accessors
 
@@ -74,7 +74,7 @@ Name | Type |
 
 • **get isEmpty**(): *boolean*
 
-*Defined in [Queue/PriorityQueue.ts:44](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L44)*
+*Defined in [Queue/PriorityQueue.ts:44](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L44)*
 
 **Returns:** *boolean*
 
@@ -84,7 +84,7 @@ ___
 
 • **get size**(): *number*
 
-*Defined in [Queue/PriorityQueue.ts:40](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L40)*
+*Defined in [Queue/PriorityQueue.ts:40](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L40)*
 
 **Returns:** *number*
 
@@ -96,7 +96,7 @@ ___
 
 *Implementation of [IPriorityQueue](../interfaces/_queue_priorityqueue_.ipriorityqueue.md)*
 
-*Defined in [Queue/PriorityQueue.ts:48](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L48)*
+*Defined in [Queue/PriorityQueue.ts:48](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L48)*
 
 **Returns:** *Iterator‹T, any, undefined›*
 
@@ -108,7 +108,7 @@ ___
 
 *Implementation of [IPriorityQueue](../interfaces/_queue_priorityqueue_.ipriorityqueue.md)*
 
-*Defined in [Queue/PriorityQueue.ts:32](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L32)*
+*Defined in [Queue/PriorityQueue.ts:32](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L32)*
 
 **Returns:** *T*
 
@@ -120,7 +120,7 @@ ___
 
 *Implementation of [IPriorityQueue](../interfaces/_queue_priorityqueue_.ipriorityqueue.md)*
 
-*Defined in [Queue/PriorityQueue.ts:28](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L28)*
+*Defined in [Queue/PriorityQueue.ts:28](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L28)*
 
 **Parameters:**
 
@@ -138,6 +138,6 @@ ___
 
 *Implementation of [IPriorityQueue](../interfaces/_queue_priorityqueue_.ipriorityqueue.md)*
 
-*Defined in [Queue/PriorityQueue.ts:36](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L36)*
+*Defined in [Queue/PriorityQueue.ts:36](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L36)*
 
 **Returns:** *T*

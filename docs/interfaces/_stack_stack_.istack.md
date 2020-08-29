@@ -33,7 +33,7 @@
 
 • **isEmpty**: *boolean*
 
-*Defined in [Stack/Stack.ts:4](https://github.com/powerofsoul/tstruct/blob/722736b/src/Stack/Stack.ts#L4)*
+*Defined in [Stack/Stack.ts:4](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Stack/Stack.ts#L4)*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **size**: *number*
 
-*Defined in [Stack/Stack.ts:5](https://github.com/powerofsoul/tstruct/blob/722736b/src/Stack/Stack.ts#L5)*
+*Defined in [Stack/Stack.ts:5](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Stack/Stack.ts#L5)*
 
 ## Methods
 
@@ -49,7 +49,7 @@ ___
 
 ▸ **[Symbol.iterator]**(): *Iterator‹T, any, undefined›*
 
-*Defined in [Stack/Stack.ts:9](https://github.com/powerofsoul/tstruct/blob/722736b/src/Stack/Stack.ts#L9)*
+*Defined in [Stack/Stack.ts:9](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Stack/Stack.ts#L9)*
 
 **Returns:** *Iterator‹T, any, undefined›*
 
@@ -59,7 +59,7 @@ ___
 
 ▸ **pop**(): *T*
 
-*Defined in [Stack/Stack.ts:7](https://github.com/powerofsoul/tstruct/blob/722736b/src/Stack/Stack.ts#L7)*
+*Defined in [Stack/Stack.ts:7](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Stack/Stack.ts#L7)*
 
 **Returns:** *T*
 
@@ -69,7 +69,7 @@ ___
 
 ▸ **push**(`val`: T): *void*
 
-*Defined in [Stack/Stack.ts:6](https://github.com/powerofsoul/tstruct/blob/722736b/src/Stack/Stack.ts#L6)*
+*Defined in [Stack/Stack.ts:6](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Stack/Stack.ts#L6)*
 
 **Parameters:**
 

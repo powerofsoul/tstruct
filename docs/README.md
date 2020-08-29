@@ -31,3 +31,4 @@ npm install tstruct
 - Quick Sort
 - Heap Sort
 - Radix Sort
+- Quick Select

@@ -42,7 +42,7 @@
 
 \+ **new Queue**(): *[Queue](_queue_queue_.queue.md)*
 
-*Defined in [Queue/Queue.ts:15](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L15)*
+*Defined in [Queue/Queue.ts:15](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L15)*
 
 **Returns:** *[Queue](_queue_queue_.queue.md)*
 
@@ -52,7 +52,7 @@
 
 • **_list**: *[LinkedList](_linkedlist_linkedlist_.linkedlist.md)‹T›*
 
-*Defined in [Queue/Queue.ts:15](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L15)*
+*Defined in [Queue/Queue.ts:15](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L15)*
 
 ## Accessors
 
@@ -60,7 +60,7 @@
 
 • **get isEmpty**(): *boolean*
 
-*Defined in [Queue/Queue.ts:35](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L35)*
+*Defined in [Queue/Queue.ts:35](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L35)*
 
 **Returns:** *boolean*
 
@@ -70,7 +70,7 @@ ___
 
 • **get size**(): *number*
 
-*Defined in [Queue/Queue.ts:39](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L39)*
+*Defined in [Queue/Queue.ts:39](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L39)*
 
 **Returns:** *number*
 
@@ -82,7 +82,7 @@ ___
 
 *Implementation of [IQueue](../interfaces/_queue_queue_.iqueue.md)*
 
-*Defined in [Queue/Queue.ts:43](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L43)*
+*Defined in [Queue/Queue.ts:43](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L43)*
 
 **Returns:** *Iterator‹T, any, undefined›*
 
@@ -94,7 +94,7 @@ ___
 
 *Implementation of [IQueue](../interfaces/_queue_queue_.iqueue.md)*
 
-*Defined in [Queue/Queue.ts:25](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L25)*
+*Defined in [Queue/Queue.ts:25](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L25)*
 
 **Returns:** *T*
 
@@ -106,7 +106,7 @@ ___
 
 *Implementation of [IQueue](../interfaces/_queue_queue_.iqueue.md)*
 
-*Defined in [Queue/Queue.ts:21](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L21)*
+*Defined in [Queue/Queue.ts:21](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L21)*
 
 **Parameters:**
 
@@ -124,6 +124,6 @@ ___
 
 *Implementation of [IQueue](../interfaces/_queue_queue_.iqueue.md)*
 
-*Defined in [Queue/Queue.ts:31](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L31)*
+*Defined in [Queue/Queue.ts:31](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L31)*
 
 **Returns:** *T*

@@ -34,7 +34,7 @@
 
 • **isEmpty**: *boolean*
 
-*Defined in [Queue/Queue.ts:9](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L9)*
+*Defined in [Queue/Queue.ts:9](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L9)*
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 • **size**: *number*
 
-*Defined in [Queue/Queue.ts:8](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L8)*
+*Defined in [Queue/Queue.ts:8](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L8)*
 
 ## Methods
 
@@ -50,7 +50,7 @@ ___
 
 ▸ **[Symbol.iterator]**(): *Iterator‹T, any, undefined›*
 
-*Defined in [Queue/Queue.ts:11](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L11)*
+*Defined in [Queue/Queue.ts:11](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L11)*
 
 **Returns:** *Iterator‹T, any, undefined›*
 
@@ -60,7 +60,7 @@ ___
 
 ▸ **dequeue**(): *T*
 
-*Defined in [Queue/Queue.ts:5](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L5)*
+*Defined in [Queue/Queue.ts:5](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L5)*
 
 **Returns:** *T*
 
@@ -70,7 +70,7 @@ ___
 
 ▸ **enqueue**(`item`: T): *void*
 
-*Defined in [Queue/Queue.ts:4](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L4)*
+*Defined in [Queue/Queue.ts:4](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L4)*
 
 **Parameters:**
 
@@ -86,6 +86,6 @@ ___
 
 ▸ **peek**(): *T*
 
-*Defined in [Queue/Queue.ts:6](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/Queue.ts#L6)*
+*Defined in [Queue/Queue.ts:6](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/Queue.ts#L6)*
 
 **Returns:** *T*

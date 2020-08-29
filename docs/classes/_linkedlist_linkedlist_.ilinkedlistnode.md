@@ -37,7 +37,7 @@
 
 \+ **new ILinkedListNode**(`val`: T, `next?`: [ILinkedListNode](_linkedlist_linkedlist_.ilinkedlistnode.md)‹T›): *[ILinkedListNode](_linkedlist_linkedlist_.ilinkedlistnode.md)*
 
-*Defined in [LinkedList/LinkedList.ts:6](https://github.com/powerofsoul/tstruct/blob/722736b/src/LinkedList/LinkedList.ts#L6)*
+*Defined in [LinkedList/LinkedList.ts:6](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/LinkedList/LinkedList.ts#L6)*
 
 **Parameters:**
 
@@ -54,9 +54,9 @@ Name | Type |
 
 • **next**? : *[ILinkedListNode](_linkedlist_linkedlist_.ilinkedlistnode.md)‹T›*
 
-*Defined in [LinkedList/LinkedList.ts:3](https://github.com/powerofsoul/tstruct/blob/722736b/src/LinkedList/LinkedList.ts#L3)*
+*Defined in [LinkedList/LinkedList.ts:3](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/LinkedList/LinkedList.ts#L3)*
 
-*Defined in [LinkedList/LinkedList.ts:7](https://github.com/powerofsoul/tstruct/blob/722736b/src/LinkedList/LinkedList.ts#L7)*
+*Defined in [LinkedList/LinkedList.ts:7](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/LinkedList/LinkedList.ts#L7)*
 
 ___
 
@@ -64,6 +64,6 @@ ___
 
 • **val**: *T*
 
-*Defined in [LinkedList/LinkedList.ts:2](https://github.com/powerofsoul/tstruct/blob/722736b/src/LinkedList/LinkedList.ts#L2)*
+*Defined in [LinkedList/LinkedList.ts:2](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/LinkedList/LinkedList.ts#L2)*
 
-*Defined in [LinkedList/LinkedList.ts:7](https://github.com/powerofsoul/tstruct/blob/722736b/src/LinkedList/LinkedList.ts#L7)*
+*Defined in [LinkedList/LinkedList.ts:7](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/LinkedList/LinkedList.ts#L7)*

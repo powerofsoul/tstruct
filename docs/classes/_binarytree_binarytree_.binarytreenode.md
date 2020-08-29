@@ -40,7 +40,7 @@
 
 \+ **new BinaryTreeNode**(`value`: T, `parent?`: [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›, `left?`: [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›, `right?`: [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›): *[BinaryTreeNode](_binarytree_binarytree_.binarytreenode.md)*
 
-*Defined in [BinaryTree/BinaryTree.ts:47](https://github.com/powerofsoul/tstruct/blob/722736b/src/BinaryTree/BinaryTree.ts#L47)*
+*Defined in [BinaryTree/BinaryTree.ts:47](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L47)*
 
 **Parameters:**
 
@@ -61,7 +61,7 @@ Name | Type |
 
 *Implementation of [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md).[left](../interfaces/_binarytree_binarytree_.ibinarytreenode.md#optional-left)*
 
-*Defined in [BinaryTree/BinaryTree.ts:17](https://github.com/powerofsoul/tstruct/blob/722736b/src/BinaryTree/BinaryTree.ts#L17)*
+*Defined in [BinaryTree/BinaryTree.ts:17](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L17)*
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 *Implementation of [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md).[parent](../interfaces/_binarytree_binarytree_.ibinarytreenode.md#optional-parent)*
 
-*Defined in [BinaryTree/BinaryTree.ts:19](https://github.com/powerofsoul/tstruct/blob/722736b/src/BinaryTree/BinaryTree.ts#L19)*
+*Defined in [BinaryTree/BinaryTree.ts:19](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L19)*
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 *Implementation of [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md).[right](../interfaces/_binarytree_binarytree_.ibinarytreenode.md#optional-right)*
 
-*Defined in [BinaryTree/BinaryTree.ts:18](https://github.com/powerofsoul/tstruct/blob/722736b/src/BinaryTree/BinaryTree.ts#L18)*
+*Defined in [BinaryTree/BinaryTree.ts:18](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L18)*
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 *Implementation of [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md).[val](../interfaces/_binarytree_binarytree_.ibinarytreenode.md#val)*
 
-*Defined in [BinaryTree/BinaryTree.ts:16](https://github.com/powerofsoul/tstruct/blob/722736b/src/BinaryTree/BinaryTree.ts#L16)*
+*Defined in [BinaryTree/BinaryTree.ts:16](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L16)*
 
 ## Methods
 
@@ -101,7 +101,7 @@ ___
 
 *Implementation of [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)*
 
-*Defined in [BinaryTree/BinaryTree.ts:21](https://github.com/powerofsoul/tstruct/blob/722736b/src/BinaryTree/BinaryTree.ts#L21)*
+*Defined in [BinaryTree/BinaryTree.ts:21](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L21)*
 
 **Parameters:**
 
@@ -117,7 +117,7 @@ ___
 
 ▸ **height**(`node`: [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›): *number*
 
-*Defined in [BinaryTree/BinaryTree.ts:30](https://github.com/powerofsoul/tstruct/blob/722736b/src/BinaryTree/BinaryTree.ts#L30)*
+*Defined in [BinaryTree/BinaryTree.ts:30](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L30)*
 
 **Parameters:**
 
@@ -135,7 +135,7 @@ ___
 
 *Implementation of [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)*
 
-*Defined in [BinaryTree/BinaryTree.ts:45](https://github.com/powerofsoul/tstruct/blob/722736b/src/BinaryTree/BinaryTree.ts#L45)*
+*Defined in [BinaryTree/BinaryTree.ts:45](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L45)*
 
 **Returns:** *boolean*
 
@@ -147,6 +147,6 @@ ___
 
 *Implementation of [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)*
 
-*Defined in [BinaryTree/BinaryTree.ts:41](https://github.com/powerofsoul/tstruct/blob/722736b/src/BinaryTree/BinaryTree.ts#L41)*
+*Defined in [BinaryTree/BinaryTree.ts:41](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L41)*
 
 **Returns:** *"left" | "right"*

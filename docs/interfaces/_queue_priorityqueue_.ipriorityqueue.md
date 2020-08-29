@@ -34,7 +34,7 @@
 
 • **isEmpty**: *boolean*
 
-*Defined in [Queue/PriorityQueue.ts:10](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L10)*
+*Defined in [Queue/PriorityQueue.ts:10](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L10)*
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 • **size**: *number*
 
-*Defined in [Queue/PriorityQueue.ts:9](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L9)*
+*Defined in [Queue/PriorityQueue.ts:9](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L9)*
 
 ## Methods
 
@@ -50,7 +50,7 @@ ___
 
 ▸ **[Symbol.iterator]**(): *Iterator‹T, any, undefined›*
 
-*Defined in [Queue/PriorityQueue.ts:12](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L12)*
+*Defined in [Queue/PriorityQueue.ts:12](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L12)*
 
 **Returns:** *Iterator‹T, any, undefined›*
 
@@ -60,7 +60,7 @@ ___
 
 ▸ **dequeue**(): *T*
 
-*Defined in [Queue/PriorityQueue.ts:6](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L6)*
+*Defined in [Queue/PriorityQueue.ts:6](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L6)*
 
 **Returns:** *T*
 
@@ -70,7 +70,7 @@ ___
 
 ▸ **enqueue**(`item`: T): *void*
 
-*Defined in [Queue/PriorityQueue.ts:5](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L5)*
+*Defined in [Queue/PriorityQueue.ts:5](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L5)*
 
 **Parameters:**
 
@@ -86,6 +86,6 @@ ___
 
 ▸ **peek**(): *T*
 
-*Defined in [Queue/PriorityQueue.ts:7](https://github.com/powerofsoul/tstruct/blob/722736b/src/Queue/PriorityQueue.ts#L7)*
+*Defined in [Queue/PriorityQueue.ts:7](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Queue/PriorityQueue.ts#L7)*
 
 **Returns:** *T*

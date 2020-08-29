@@ -9,6 +9,7 @@
 * ["BinaryTree/AVLTree"](modules/_binarytree_avltree_.md)
 * ["BinaryTree/BinarySearchTree"](modules/_binarytree_binarysearchtree_.md)
 * ["BinaryTree/BinaryTree"](modules/_binarytree_binarytree_.md)
+* ["Common/Common"](modules/_common_common_.md)
 * ["CompareFunction"](modules/_comparefunction_.md)
 * ["Heap/Heap"](modules/_heap_heap_.md)
 * ["LinkedList/LinkedList"](modules/_linkedlist_linkedlist_.md)

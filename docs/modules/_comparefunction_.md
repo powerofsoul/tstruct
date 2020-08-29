@@ -19,7 +19,7 @@
 
 Ƭ **CompareFunctionType**: *function*
 
-*Defined in [CompareFunction.ts:1](https://github.com/powerofsoul/tstruct/blob/722736b/src/CompareFunction.ts#L1)*
+*Defined in [CompareFunction.ts:1](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/CompareFunction.ts#L1)*
 
 #### Type declaration:
 
@@ -38,7 +38,7 @@ Name | Type |
 
 ▸ **ascendingCompareFunction**(`a`: any, `b`: any): *1 | 0 | -1*
 
-*Defined in [CompareFunction.ts:5](https://github.com/powerofsoul/tstruct/blob/722736b/src/CompareFunction.ts#L5)*
+*Defined in [CompareFunction.ts:5](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/CompareFunction.ts#L5)*
 
 **Parameters:**
 
@@ -55,7 +55,7 @@ ___
 
 ▸ **descendingCompareFunction**(`a`: any, `b`: any): *1 | 0 | -1*
 
-*Defined in [CompareFunction.ts:3](https://github.com/powerofsoul/tstruct/blob/722736b/src/CompareFunction.ts#L3)*
+*Defined in [CompareFunction.ts:3](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/CompareFunction.ts#L3)*
 
 **Parameters:**
 
