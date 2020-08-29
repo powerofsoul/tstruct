@@ -1,5 +1,5 @@
 import { IMaxHeap, MaxHeap, IHeap, Heap } from "../Heap/Heap";
-import { descendingCompareFunction } from "..";
+import { descendingCompareFunction } from "../CompareFunction";
 
 export interface IPriorityQueue<T> {
     enqueue(item: T): void;

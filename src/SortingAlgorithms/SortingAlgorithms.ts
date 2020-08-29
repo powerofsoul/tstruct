@@ -2,7 +2,7 @@ import {
     ascendingCompareFunction,
     CompareFunctionType,
 } from "../CompareFunction";
-import { PriorityQueue } from "../Queue";
+import { PriorityQueue } from "../Queue/PriorityQueue";
 
 export type GetComparisonValueFunc<T, K> = (e: T) => K;
 
