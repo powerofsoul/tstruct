@@ -1,5 +1,11 @@
 import { ascendingCompareFunction } from "../CompareFunction";
 
+/**
+ * 
+ * @param elements {T}
+ * @param kth 0 based index of the element after the array is supposed to be sorted
+ * @param compareFunction How comparison is done. By default this functions sort in ascending order
+ */
 export function QuickSelect<T>(
     elements: T[],
     kth: number,
