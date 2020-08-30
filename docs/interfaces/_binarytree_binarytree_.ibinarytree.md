@@ -38,7 +38,7 @@
 
 • **head**? : *[IBinaryTreeNode](_binarytree_binarytree_.ibinarytreenode.md)‹T›*
 
-*Defined in [BinaryTree/BinaryTree.ts:63](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L63)*
+*Defined in [BinaryTree/BinaryTree.ts:63](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L63)*
 
 ## Methods
 
@@ -46,7 +46,7 @@
 
 ▸ **add**(`value`: T): *void*
 
-*Defined in [BinaryTree/BinaryTree.ts:64](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L64)*
+*Defined in [BinaryTree/BinaryTree.ts:64](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L64)*
 
 **Parameters:**
 
@@ -62,7 +62,7 @@ ___
 
 ▸ **findNode**(`value`: T): *[IBinaryTreeNode](_binarytree_binarytree_.ibinarytreenode.md)‹T› | undefined*
 
-*Defined in [BinaryTree/BinaryTree.ts:66](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L66)*
+*Defined in [BinaryTree/BinaryTree.ts:66](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L66)*
 
 **Parameters:**
 
@@ -78,7 +78,7 @@ ___
 
 ▸ **remove**(`value`: T): *void*
 
-*Defined in [BinaryTree/BinaryTree.ts:68](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L68)*
+*Defined in [BinaryTree/BinaryTree.ts:68](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L68)*
 
 **Parameters:**
 
@@ -94,7 +94,7 @@ ___
 
 ▸ **toArray**(): *T[]*
 
-*Defined in [BinaryTree/BinaryTree.ts:65](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L65)*
+*Defined in [BinaryTree/BinaryTree.ts:65](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L65)*
 
 **Returns:** *T[]*
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **valueExists**(`value`: T): *boolean*
 
-*Defined in [BinaryTree/BinaryTree.ts:67](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L67)*
+*Defined in [BinaryTree/BinaryTree.ts:67](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L67)*
 
 **Parameters:**
 

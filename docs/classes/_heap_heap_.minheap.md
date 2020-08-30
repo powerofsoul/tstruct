@@ -46,7 +46,7 @@
 
 *Overrides [Heap](_heap_heap_.heap.md).[constructor](_heap_heap_.heap.md#constructor)*
 
-*Defined in [Heap/Heap.ts:137](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Heap/Heap.ts#L137)*
+*Defined in [Heap/Heap.ts:137](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L137)*
 
 **Returns:** *[MinHeap](_heap_heap_.minheap.md)*
 
@@ -58,7 +58,7 @@
 
 *Inherited from [Heap](_heap_heap_.heap.md).[size](_heap_heap_.heap.md#size)*
 
-*Defined in [Heap/Heap.ts:27](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Heap/Heap.ts#L27)*
+*Defined in [Heap/Heap.ts:27](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L27)*
 
 **Returns:** *number*
 
@@ -72,7 +72,7 @@
 
 *Inherited from [Heap](_heap_heap_.heap.md).[[Symbol.iterator]](_heap_heap_.heap.md#[symbol.iterator])*
 
-*Defined in [Heap/Heap.ts:117](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Heap/Heap.ts#L117)*
+*Defined in [Heap/Heap.ts:117](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L117)*
 
 **Returns:** *Iterator‹T, any, undefined›*
 
@@ -86,7 +86,7 @@ ___
 
 *Inherited from [Heap](_heap_heap_.heap.md).[add](_heap_heap_.heap.md#add)*
 
-*Defined in [Heap/Heap.ts:53](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Heap/Heap.ts#L53)*
+*Defined in [Heap/Heap.ts:53](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L53)*
 
 **Parameters:**
 
@@ -104,7 +104,7 @@ ___
 
 *Implementation of [IMinHeap](../interfaces/_heap_heap_.iminheap.md)*
 
-*Defined in [Heap/Heap.ts:142](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Heap/Heap.ts#L142)*
+*Defined in [Heap/Heap.ts:142](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L142)*
 
 **Returns:** *T*
 
@@ -118,7 +118,7 @@ ___
 
 *Inherited from [Heap](_heap_heap_.heap.md).[extractRoot](_heap_heap_.heap.md#extractroot)*
 
-*Defined in [Heap/Heap.ts:44](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Heap/Heap.ts#L44)*
+*Defined in [Heap/Heap.ts:44](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L44)*
 
 **Returns:** *T*
 
@@ -130,7 +130,7 @@ ___
 
 *Implementation of [IMinHeap](../interfaces/_heap_heap_.iminheap.md)*
 
-*Defined in [Heap/Heap.ts:146](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Heap/Heap.ts#L146)*
+*Defined in [Heap/Heap.ts:146](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L146)*
 
 **Returns:** *T*
 
@@ -144,7 +144,7 @@ ___
 
 *Inherited from [Heap](_heap_heap_.heap.md).[getRoot](_heap_heap_.heap.md#getroot)*
 
-*Defined in [Heap/Heap.ts:40](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Heap/Heap.ts#L40)*
+*Defined in [Heap/Heap.ts:40](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L40)*
 
 **Returns:** *T*
 
@@ -158,7 +158,7 @@ ___
 
 *Inherited from [Heap](_heap_heap_.heap.md).[remove](_heap_heap_.heap.md#remove)*
 
-*Defined in [Heap/Heap.ts:74](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Heap/Heap.ts#L74)*
+*Defined in [Heap/Heap.ts:74](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L74)*
 
 **Parameters:**
 
@@ -178,6 +178,6 @@ ___
 
 *Inherited from [Heap](_heap_heap_.heap.md).[toArray](_heap_heap_.heap.md#toarray)*
 
-*Defined in [Heap/Heap.ts:105](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Heap/Heap.ts#L105)*
+*Defined in [Heap/Heap.ts:105](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L105)*
 
 **Returns:** *T[]*

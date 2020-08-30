@@ -41,7 +41,7 @@
 
 \+ **new Stack**(): *[Stack](_stack_stack_.stack.md)*
 
-*Defined in [Stack/Stack.ts:13](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Stack/Stack.ts#L13)*
+*Defined in [Stack/Stack.ts:13](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Stack/Stack.ts#L13)*
 
 **Returns:** *[Stack](_stack_stack_.stack.md)*
 
@@ -51,7 +51,7 @@
 
 • **_list**: *[ILinkedList](../interfaces/_linkedlist_linkedlist_.ilinkedlist.md)‹T›*
 
-*Defined in [Stack/Stack.ts:13](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Stack/Stack.ts#L13)*
+*Defined in [Stack/Stack.ts:13](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Stack/Stack.ts#L13)*
 
 ## Accessors
 
@@ -59,7 +59,7 @@
 
 • **get isEmpty**(): *boolean*
 
-*Defined in [Stack/Stack.ts:19](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Stack/Stack.ts#L19)*
+*Defined in [Stack/Stack.ts:19](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Stack/Stack.ts#L19)*
 
 **Returns:** *boolean*
 
@@ -69,7 +69,7 @@ ___
 
 • **get size**(): *number*
 
-*Defined in [Stack/Stack.ts:23](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Stack/Stack.ts#L23)*
+*Defined in [Stack/Stack.ts:23](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Stack/Stack.ts#L23)*
 
 **Returns:** *number*
 
@@ -81,7 +81,7 @@ ___
 
 *Implementation of [IStack](../interfaces/_stack_stack_.istack.md)*
 
-*Defined in [Stack/Stack.ts:41](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Stack/Stack.ts#L41)*
+*Defined in [Stack/Stack.ts:41](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Stack/Stack.ts#L41)*
 
 **Returns:** *Iterator‹T, any, undefined›*
 
@@ -93,7 +93,7 @@ ___
 
 *Implementation of [IStack](../interfaces/_stack_stack_.istack.md)*
 
-*Defined in [Stack/Stack.ts:31](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Stack/Stack.ts#L31)*
+*Defined in [Stack/Stack.ts:31](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Stack/Stack.ts#L31)*
 
 **Returns:** *T*
 
@@ -105,7 +105,7 @@ ___
 
 *Implementation of [IStack](../interfaces/_stack_stack_.istack.md)*
 
-*Defined in [Stack/Stack.ts:27](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Stack/Stack.ts#L27)*
+*Defined in [Stack/Stack.ts:27](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Stack/Stack.ts#L27)*
 
 **Parameters:**
 

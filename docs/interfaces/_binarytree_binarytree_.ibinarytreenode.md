@@ -36,7 +36,7 @@
 
 • **left**? : *[IBinaryTreeNode](_binarytree_binarytree_.ibinarytreenode.md)‹T›*
 
-*Defined in [BinaryTree/BinaryTree.ts:5](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L5)*
+*Defined in [BinaryTree/BinaryTree.ts:5](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L5)*
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 • **parent**? : *[IBinaryTreeNode](_binarytree_binarytree_.ibinarytreenode.md)‹T›*
 
-*Defined in [BinaryTree/BinaryTree.ts:7](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L7)*
+*Defined in [BinaryTree/BinaryTree.ts:7](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L7)*
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 • **right**? : *[IBinaryTreeNode](_binarytree_binarytree_.ibinarytreenode.md)‹T›*
 
-*Defined in [BinaryTree/BinaryTree.ts:6](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L6)*
+*Defined in [BinaryTree/BinaryTree.ts:6](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L6)*
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 • **val**: *T*
 
-*Defined in [BinaryTree/BinaryTree.ts:4](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L4)*
+*Defined in [BinaryTree/BinaryTree.ts:4](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L4)*
 
 ## Methods
 
@@ -68,7 +68,7 @@ ___
 
 ▸ **copyTo**(`node?`: [IBinaryTreeNode](_binarytree_binarytree_.ibinarytreenode.md)‹T›): *void*
 
-*Defined in [BinaryTree/BinaryTree.ts:10](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L10)*
+*Defined in [BinaryTree/BinaryTree.ts:10](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L10)*
 
 **Parameters:**
 
@@ -84,7 +84,7 @@ ___
 
 ▸ **height**(): *number*
 
-*Defined in [BinaryTree/BinaryTree.ts:11](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L11)*
+*Defined in [BinaryTree/BinaryTree.ts:11](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L11)*
 
 **Returns:** *number*
 
@@ -94,7 +94,7 @@ ___
 
 ▸ **isBalanced**(): *boolean*
 
-*Defined in [BinaryTree/BinaryTree.ts:12](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L12)*
+*Defined in [BinaryTree/BinaryTree.ts:12](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L12)*
 
 **Returns:** *boolean*
 
@@ -104,6 +104,6 @@ ___
 
 ▸ **parentSide**(): *"left" | "right"*
 
-*Defined in [BinaryTree/BinaryTree.ts:8](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L8)*
+*Defined in [BinaryTree/BinaryTree.ts:8](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L8)*
 
 **Returns:** *"left" | "right"*

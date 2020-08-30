@@ -52,7 +52,7 @@
 
 \+ **new BinarySearchTree**(`compareFunction?`: [CompareFunctionType](../modules/_comparefunction_.md#comparefunctiontype)‹T›): *[BinarySearchTree](_binarytree_binarysearchtree_.binarysearchtree.md)*
 
-*Defined in [BinaryTree/BinarySearchTree.ts:22](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinarySearchTree.ts#L22)*
+*Defined in [BinaryTree/BinarySearchTree.ts:22](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinarySearchTree.ts#L22)*
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ Name | Type |
 
 *Inherited from [BinaryTree](_binarytree_binarytree_.binarytree.md).[_head](_binarytree_binarytree_.binarytree.md#protected-_head)*
 
-*Defined in [BinaryTree/BinaryTree.ts:72](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L72)*
+*Defined in [BinaryTree/BinaryTree.ts:72](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L72)*
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 • **compareFunction**: *[CompareFunctionType](../modules/_comparefunction_.md#comparefunctiontype)‹T›* = descendingCompareFunction
 
-*Defined in [BinaryTree/BinarySearchTree.ts:20](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinarySearchTree.ts#L20)*
+*Defined in [BinaryTree/BinarySearchTree.ts:20](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinarySearchTree.ts#L20)*
 
 ## Accessors
 
@@ -88,7 +88,7 @@ ___
 
 *Inherited from [BinaryTree](_binarytree_binarytree_.binarytree.md).[head](_binarytree_binarytree_.binarytree.md#head)*
 
-*Defined in [BinaryTree/BinaryTree.ts:74](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L74)*
+*Defined in [BinaryTree/BinaryTree.ts:74](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L74)*
 
 **Returns:** *[IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›*
 
@@ -98,7 +98,7 @@ ___
 
 • **get max**(): *T*
 
-*Defined in [BinaryTree/BinarySearchTree.ts:59](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinarySearchTree.ts#L59)*
+*Defined in [BinaryTree/BinarySearchTree.ts:59](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinarySearchTree.ts#L59)*
 
 **Returns:** *T*
 
@@ -108,7 +108,7 @@ ___
 
 • **get min**(): *T*
 
-*Defined in [BinaryTree/BinarySearchTree.ts:47](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinarySearchTree.ts#L47)*
+*Defined in [BinaryTree/BinarySearchTree.ts:47](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinarySearchTree.ts#L47)*
 
 **Returns:** *T*
 
@@ -120,7 +120,7 @@ ___
 
 *Overrides [BinaryTree](_binarytree_binarytree_.binarytree.md).[add](_binarytree_binarytree_.binarytree.md#add)*
 
-*Defined in [BinaryTree/BinarySearchTree.ts:31](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinarySearchTree.ts#L31)*
+*Defined in [BinaryTree/BinarySearchTree.ts:31](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinarySearchTree.ts#L31)*
 
 **Parameters:**
 
@@ -144,7 +144,7 @@ ___
 
 ▸ **delete**(`value`: T): *void*
 
-*Defined in [BinaryTree/BinarySearchTree.ts:43](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinarySearchTree.ts#L43)*
+*Defined in [BinaryTree/BinarySearchTree.ts:43](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinarySearchTree.ts#L43)*
 
 **Parameters:**
 
@@ -162,7 +162,7 @@ ___
 
 *Inherited from [BinaryTree](_binarytree_binarytree_.binarytree.md).[findNode](_binarytree_binarytree_.binarytree.md#findnode)*
 
-*Defined in [BinaryTree/BinaryTree.ts:154](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L154)*
+*Defined in [BinaryTree/BinaryTree.ts:154](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L154)*
 
 **Parameters:**
 
@@ -179,7 +179,7 @@ ___
 
 ▸ **insertNode**(`value`: T, `node`: [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›): *[IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›*
 
-*Defined in [BinaryTree/BinarySearchTree.ts:70](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinarySearchTree.ts#L70)*
+*Defined in [BinaryTree/BinarySearchTree.ts:70](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinarySearchTree.ts#L70)*
 
 **Parameters:**
 
@@ -200,7 +200,7 @@ ___
 
 *Inherited from [BinaryTree](_binarytree_binarytree_.binarytree.md).[remove](_binarytree_binarytree_.binarytree.md#remove)*
 
-*Defined in [BinaryTree/BinaryTree.ts:103](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L103)*
+*Defined in [BinaryTree/BinaryTree.ts:103](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L103)*
 
 **Parameters:**
 
@@ -220,7 +220,7 @@ ___
 
 *Inherited from [BinaryTree](_binarytree_binarytree_.binarytree.md).[toArray](_binarytree_binarytree_.binarytree.md#toarray)*
 
-*Defined in [BinaryTree/BinaryTree.ts:131](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L131)*
+*Defined in [BinaryTree/BinaryTree.ts:131](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L131)*
 
 **Returns:** *T[]*
 
@@ -234,7 +234,7 @@ ___
 
 *Inherited from [BinaryTree](_binarytree_binarytree_.binarytree.md).[valueExists](_binarytree_binarytree_.binarytree.md#valueexists)*
 
-*Defined in [BinaryTree/BinaryTree.ts:168](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/BinaryTree/BinaryTree.ts#L168)*
+*Defined in [BinaryTree/BinaryTree.ts:168](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L168)*
 
 **Parameters:**
 

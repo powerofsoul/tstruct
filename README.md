@@ -22,6 +22,7 @@ npm install tstruct
 - Queue
     - Priority Queue
 - Stack
+- Union Find
 
 ## Algorithms
 - Quick Sort

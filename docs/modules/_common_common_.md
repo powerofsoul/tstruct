@@ -14,7 +14,7 @@
 
 ▸ **QuickSelect**‹**T**›(`elements`: T[], `kth`: number, `compareFunction`: [CompareFunctionType](_comparefunction_.md#comparefunctiontype)‹any›): *T*
 
-*Defined in [Common/Common.ts:3](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/Common/Common.ts#L3)*
+*Defined in [Common/Common.ts:3](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Common/Common.ts#L3)*
 
 **Type parameters:**
 

@@ -17,3 +17,4 @@
 * ["Queue/Queue"](modules/_queue_queue_.md)
 * ["SortingAlgorithms/SortingAlgorithms"](modules/_sortingalgorithms_sortingalgorithms_.md)
 * ["Stack/Stack"](modules/_stack_stack_.md)
+* ["UnionFind/UnionFind"](modules/_unionfind_unionfind_.md)

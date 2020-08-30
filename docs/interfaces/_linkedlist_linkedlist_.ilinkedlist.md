@@ -36,7 +36,7 @@
 
 • **head**: *[ILinkedListNode](../classes/_linkedlist_linkedlist_.ilinkedlistnode.md)‹T›*
 
-*Defined in [LinkedList/LinkedList.ts:16](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/LinkedList/LinkedList.ts#L16)*
+*Defined in [LinkedList/LinkedList.ts:16](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/LinkedList/LinkedList.ts#L16)*
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 • **isEmpty**: *boolean*
 
-*Defined in [LinkedList/LinkedList.ts:18](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/LinkedList/LinkedList.ts#L18)*
+*Defined in [LinkedList/LinkedList.ts:18](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/LinkedList/LinkedList.ts#L18)*
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 • **size**: *number*
 
-*Defined in [LinkedList/LinkedList.ts:15](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/LinkedList/LinkedList.ts#L15)*
+*Defined in [LinkedList/LinkedList.ts:15](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/LinkedList/LinkedList.ts#L15)*
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 • **tail**: *[ILinkedListNode](../classes/_linkedlist_linkedlist_.ilinkedlistnode.md)‹T›*
 
-*Defined in [LinkedList/LinkedList.ts:17](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/LinkedList/LinkedList.ts#L17)*
+*Defined in [LinkedList/LinkedList.ts:17](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/LinkedList/LinkedList.ts#L17)*
 
 ## Methods
 
@@ -68,7 +68,7 @@ ___
 
 ▸ **[Symbol.iterator]**(): *Iterator‹T, any, undefined›*
 
-*Defined in [LinkedList/LinkedList.ts:20](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/LinkedList/LinkedList.ts#L20)*
+*Defined in [LinkedList/LinkedList.ts:20](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/LinkedList/LinkedList.ts#L20)*
 
 **Returns:** *Iterator‹T, any, undefined›*
 
@@ -78,7 +78,7 @@ ___
 
 ▸ **add**(`val`: T): *void*
 
-*Defined in [LinkedList/LinkedList.ts:11](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/LinkedList/LinkedList.ts#L11)*
+*Defined in [LinkedList/LinkedList.ts:11](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/LinkedList/LinkedList.ts#L11)*
 
 **Parameters:**
 
@@ -94,7 +94,7 @@ ___
 
 ▸ **get**(`index`: number): *T*
 
-*Defined in [LinkedList/LinkedList.ts:13](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/LinkedList/LinkedList.ts#L13)*
+*Defined in [LinkedList/LinkedList.ts:13](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/LinkedList/LinkedList.ts#L13)*
 
 **Parameters:**
 
@@ -110,7 +110,7 @@ ___
 
 ▸ **remove**(`index`: number): *void*
 
-*Defined in [LinkedList/LinkedList.ts:12](https://github.com/powerofsoul/tstruct/blob/dbfba8e/src/LinkedList/LinkedList.ts#L12)*
+*Defined in [LinkedList/LinkedList.ts:12](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/LinkedList/LinkedList.ts#L12)*
 
 **Parameters:**
 
