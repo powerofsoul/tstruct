@@ -41,7 +41,7 @@
 
 *Inherited from [IHeap](_heap_heap_.iheap.md).[size](_heap_heap_.iheap.md#readonly-size)*
 
-*Defined in [Heap/Heap.ts:11](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L11)*
+*Defined in [Heap/Heap.ts:11](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L11)*
 
 ## Methods
 
@@ -51,7 +51,7 @@
 
 *Inherited from [IHeap](_heap_heap_.iheap.md).[[Symbol.iterator]](_heap_heap_.iheap.md#[symbol.iterator])*
 
-*Defined in [Heap/Heap.ts:12](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L12)*
+*Defined in [Heap/Heap.ts:12](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L12)*
 
 **Returns:** *Iterator‹T, any, undefined›*
 
@@ -63,7 +63,7 @@ ___
 
 *Inherited from [IHeap](_heap_heap_.iheap.md).[add](_heap_heap_.iheap.md#add)*
 
-*Defined in [Heap/Heap.ts:4](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L4)*
+*Defined in [Heap/Heap.ts:4](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L4)*
 
 **Parameters:**
 
@@ -79,7 +79,7 @@ ___
 
 ▸ **extractMax**(): *T*
 
-*Defined in [Heap/Heap.ts:16](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L16)*
+*Defined in [Heap/Heap.ts:16](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L16)*
 
 **Returns:** *T*
 
@@ -91,7 +91,7 @@ ___
 
 *Inherited from [IHeap](_heap_heap_.iheap.md).[extractRoot](_heap_heap_.iheap.md#extractroot)*
 
-*Defined in [Heap/Heap.ts:7](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L7)*
+*Defined in [Heap/Heap.ts:7](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L7)*
 
 **Returns:** *T*
 
@@ -101,7 +101,7 @@ ___
 
 ▸ **getMax**(): *T*
 
-*Defined in [Heap/Heap.ts:17](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L17)*
+*Defined in [Heap/Heap.ts:17](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L17)*
 
 **Returns:** *T*
 
@@ -113,7 +113,7 @@ ___
 
 *Inherited from [IHeap](_heap_heap_.iheap.md).[getRoot](_heap_heap_.iheap.md#getroot)*
 
-*Defined in [Heap/Heap.ts:6](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L6)*
+*Defined in [Heap/Heap.ts:6](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L6)*
 
 **Returns:** *T*
 
@@ -125,7 +125,7 @@ ___
 
 *Inherited from [IHeap](_heap_heap_.iheap.md).[remove](_heap_heap_.iheap.md#remove)*
 
-*Defined in [Heap/Heap.ts:5](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L5)*
+*Defined in [Heap/Heap.ts:5](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L5)*
 
 **Parameters:**
 
@@ -143,6 +143,6 @@ ___
 
 *Inherited from [IHeap](_heap_heap_.iheap.md).[toArray](_heap_heap_.iheap.md#toarray)*
 
-*Defined in [Heap/Heap.ts:9](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L9)*
+*Defined in [Heap/Heap.ts:9](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L9)*
 
 **Returns:** *T[]*

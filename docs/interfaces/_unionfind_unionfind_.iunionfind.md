@@ -34,7 +34,7 @@
 
 • **numberOfComponents**: *number*
 
-*Defined in [UnionFind/UnionFind.ts:9](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L9)*
+*Defined in [UnionFind/UnionFind.ts:9](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L9)*
 
 ## Methods
 
@@ -42,7 +42,7 @@
 
 ▸ **add**(`item`: T): *void*
 
-*Defined in [UnionFind/UnionFind.ts:2](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L2)*
+*Defined in [UnionFind/UnionFind.ts:2](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L2)*
 
 **Parameters:**
 
@@ -58,7 +58,7 @@ ___
 
 ▸ **find**(`item`: T): *T*
 
-*Defined in [UnionFind/UnionFind.ts:4](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L4)*
+*Defined in [UnionFind/UnionFind.ts:4](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L4)*
 
 **Parameters:**
 
@@ -74,7 +74,7 @@ ___
 
 ▸ **isConnected**(`item1`: T, `item2`: T): *boolean*
 
-*Defined in [UnionFind/UnionFind.ts:7](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L7)*
+*Defined in [UnionFind/UnionFind.ts:7](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L7)*
 
 **Parameters:**
 
@@ -91,7 +91,7 @@ ___
 
 ▸ **size**(`item`: T): *number*
 
-*Defined in [UnionFind/UnionFind.ts:5](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L5)*
+*Defined in [UnionFind/UnionFind.ts:5](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L5)*
 
 **Parameters:**
 
@@ -107,7 +107,7 @@ ___
 
 ▸ **union**(`item1`: T, `item2`: T): *void*
 
-*Defined in [UnionFind/UnionFind.ts:3](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L3)*
+*Defined in [UnionFind/UnionFind.ts:3](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L3)*
 
 **Parameters:**
 

@@ -41,7 +41,7 @@
 
 • **size**: *number*
 
-*Defined in [Heap/Heap.ts:11](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L11)*
+*Defined in [Heap/Heap.ts:11](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L11)*
 
 ## Methods
 
@@ -49,7 +49,7 @@
 
 ▸ **[Symbol.iterator]**(): *Iterator‹T, any, undefined›*
 
-*Defined in [Heap/Heap.ts:12](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L12)*
+*Defined in [Heap/Heap.ts:12](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L12)*
 
 **Returns:** *Iterator‹T, any, undefined›*
 
@@ -59,7 +59,7 @@ ___
 
 ▸ **add**(`value`: T): *void*
 
-*Defined in [Heap/Heap.ts:4](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L4)*
+*Defined in [Heap/Heap.ts:4](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L4)*
 
 **Parameters:**
 
@@ -75,7 +75,7 @@ ___
 
 ▸ **extractRoot**(): *T*
 
-*Defined in [Heap/Heap.ts:7](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L7)*
+*Defined in [Heap/Heap.ts:7](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L7)*
 
 **Returns:** *T*
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **getRoot**(): *T*
 
-*Defined in [Heap/Heap.ts:6](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L6)*
+*Defined in [Heap/Heap.ts:6](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L6)*
 
 **Returns:** *T*
 
@@ -95,7 +95,7 @@ ___
 
 ▸ **remove**(`value`: T): *void*
 
-*Defined in [Heap/Heap.ts:5](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L5)*
+*Defined in [Heap/Heap.ts:5](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L5)*
 
 **Parameters:**
 
@@ -111,6 +111,6 @@ ___
 
 ▸ **toArray**(): *T[]*
 
-*Defined in [Heap/Heap.ts:9](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L9)*
+*Defined in [Heap/Heap.ts:9](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L9)*
 
 **Returns:** *T[]*

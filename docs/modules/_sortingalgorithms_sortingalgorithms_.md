@@ -20,7 +20,7 @@
 
 Ƭ **GetComparisonValueFunc**: *function*
 
-*Defined in [SortingAlgorithms/SortingAlgorithms.ts:7](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/SortingAlgorithms/SortingAlgorithms.ts#L7)*
+*Defined in [SortingAlgorithms/SortingAlgorithms.ts:7](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/SortingAlgorithms/SortingAlgorithms.ts#L7)*
 
 #### Type declaration:
 
@@ -38,7 +38,7 @@ Name | Type |
 
 ▸ **HeapSort**‹**T**›(`elements`: T[], `getComparisonValue`: [GetComparisonValueFunc](_sortingalgorithms_sortingalgorithms_.md#getcomparisonvaluefunc)‹T, any›, `compareFunction`: [CompareFunctionType](_comparefunction_.md#comparefunctiontype)‹any›): *T[]*
 
-*Defined in [SortingAlgorithms/SortingAlgorithms.ts:9](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/SortingAlgorithms/SortingAlgorithms.ts#L9)*
+*Defined in [SortingAlgorithms/SortingAlgorithms.ts:9](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/SortingAlgorithms/SortingAlgorithms.ts#L9)*
 
 **Type parameters:**
 
@@ -60,7 +60,7 @@ ___
 
 ▸ **QuickSort**‹**T**›(`elements`: T[], `getComparisonValue`: [GetComparisonValueFunc](_sortingalgorithms_sortingalgorithms_.md#getcomparisonvaluefunc)‹T, any›, `compareFunction`: [CompareFunctionType](_comparefunction_.md#comparefunctiontype)‹any›): *T[]*
 
-*Defined in [SortingAlgorithms/SortingAlgorithms.ts:29](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/SortingAlgorithms/SortingAlgorithms.ts#L29)*
+*Defined in [SortingAlgorithms/SortingAlgorithms.ts:29](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/SortingAlgorithms/SortingAlgorithms.ts#L29)*
 
 **Type parameters:**
 
@@ -82,7 +82,7 @@ ___
 
 ▸ **RadixSort**‹**T**›(`elements`: T[], `getComparisonValue`: [GetComparisonValueFunc](_sortingalgorithms_sortingalgorithms_.md#getcomparisonvaluefunc)‹T, number›): *T[]*
 
-*Defined in [SortingAlgorithms/SortingAlgorithms.ts:69](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/SortingAlgorithms/SortingAlgorithms.ts#L69)*
+*Defined in [SortingAlgorithms/SortingAlgorithms.ts:69](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/SortingAlgorithms/SortingAlgorithms.ts#L69)*
 
 **Type parameters:**
 

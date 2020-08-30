@@ -47,7 +47,7 @@
 
 \+ **new UnionFind**(): *[UnionFind](_unionfind_unionfind_.unionfind.md)*
 
-*Defined in [UnionFind/UnionFind.ts:18](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L18)*
+*Defined in [UnionFind/UnionFind.ts:18](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L18)*
 
 **Returns:** *[UnionFind](_unionfind_unionfind_.unionfind.md)*
 
@@ -57,7 +57,7 @@
 
 • **_arr**: *number[]*
 
-*Defined in [UnionFind/UnionFind.ts:15](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L15)*
+*Defined in [UnionFind/UnionFind.ts:15](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L15)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **_idToObject**: *Map‹number, T›*
 
-*Defined in [UnionFind/UnionFind.ts:14](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L14)*
+*Defined in [UnionFind/UnionFind.ts:14](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L14)*
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 • **_numberOfComponents**: *number*
 
-*Defined in [UnionFind/UnionFind.ts:18](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L18)*
+*Defined in [UnionFind/UnionFind.ts:18](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L18)*
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 • **_objectToId**: *Map‹T, number›*
 
-*Defined in [UnionFind/UnionFind.ts:13](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L13)*
+*Defined in [UnionFind/UnionFind.ts:13](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L13)*
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 • **_sizes**: *number[]*
 
-*Defined in [UnionFind/UnionFind.ts:16](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L16)*
+*Defined in [UnionFind/UnionFind.ts:16](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L16)*
 
 ## Accessors
 
@@ -97,7 +97,7 @@ ___
 
 • **get numberOfComponents**(): *number*
 
-*Defined in [UnionFind/UnionFind.ts:28](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L28)*
+*Defined in [UnionFind/UnionFind.ts:28](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L28)*
 
 **Returns:** *number*
 
@@ -109,7 +109,7 @@ ___
 
 *Implementation of [IUnionFind](../interfaces/_unionfind_unionfind_.iunionfind.md)*
 
-*Defined in [UnionFind/UnionFind.ts:32](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L32)*
+*Defined in [UnionFind/UnionFind.ts:32](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L32)*
 
 **Parameters:**
 
@@ -127,7 +127,7 @@ ___
 
 *Implementation of [IUnionFind](../interfaces/_unionfind_unionfind_.iunionfind.md)*
 
-*Defined in [UnionFind/UnionFind.ts:64](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L64)*
+*Defined in [UnionFind/UnionFind.ts:64](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L64)*
 
 **Parameters:**
 
@@ -143,7 +143,7 @@ ___
 
 ▸ **findIndex**(`item`: T): *number*
 
-*Defined in [UnionFind/UnionFind.ts:70](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L70)*
+*Defined in [UnionFind/UnionFind.ts:70](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L70)*
 
 **Parameters:**
 
@@ -161,7 +161,7 @@ ___
 
 *Implementation of [IUnionFind](../interfaces/_unionfind_unionfind_.iunionfind.md)*
 
-*Defined in [UnionFind/UnionFind.ts:91](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L91)*
+*Defined in [UnionFind/UnionFind.ts:91](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L91)*
 
 **Parameters:**
 
@@ -180,7 +180,7 @@ ___
 
 *Implementation of [IUnionFind](../interfaces/_unionfind_unionfind_.iunionfind.md)*
 
-*Defined in [UnionFind/UnionFind.ts:86](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L86)*
+*Defined in [UnionFind/UnionFind.ts:86](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L86)*
 
 **Parameters:**
 
@@ -198,7 +198,7 @@ ___
 
 *Implementation of [IUnionFind](../interfaces/_unionfind_unionfind_.iunionfind.md)*
 
-*Defined in [UnionFind/UnionFind.ts:45](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/UnionFind/UnionFind.ts#L45)*
+*Defined in [UnionFind/UnionFind.ts:45](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/UnionFind/UnionFind.ts#L45)*
 
 **Parameters:**
 

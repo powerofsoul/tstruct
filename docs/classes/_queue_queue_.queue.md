@@ -2,6 +2,8 @@
 
 # Class: Queue ‹**T**›
 
+Standard Queue based on Single Linked List
+
 ## Type parameters
 
 ▪ **T**
@@ -42,7 +44,7 @@
 
 \+ **new Queue**(): *[Queue](_queue_queue_.queue.md)*
 
-*Defined in [Queue/Queue.ts:15](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Queue/Queue.ts#L15)*
+*Defined in [Queue/Queue.ts:18](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Queue/Queue.ts#L18)*
 
 **Returns:** *[Queue](_queue_queue_.queue.md)*
 
@@ -52,7 +54,7 @@
 
 • **_list**: *[LinkedList](_linkedlist_linkedlist_.linkedlist.md)‹T›*
 
-*Defined in [Queue/Queue.ts:15](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Queue/Queue.ts#L15)*
+*Defined in [Queue/Queue.ts:18](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Queue/Queue.ts#L18)*
 
 ## Accessors
 
@@ -60,9 +62,11 @@
 
 • **get isEmpty**(): *boolean*
 
-*Defined in [Queue/Queue.ts:35](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Queue/Queue.ts#L35)*
+*Defined in [Queue/Queue.ts:52](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Queue/Queue.ts#L52)*
 
 **Returns:** *boolean*
+
+Determine if the queue is empty or not
 
 ___
 
@@ -70,9 +74,11 @@ ___
 
 • **get size**(): *number*
 
-*Defined in [Queue/Queue.ts:39](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Queue/Queue.ts#L39)*
+*Defined in [Queue/Queue.ts:59](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Queue/Queue.ts#L59)*
 
 **Returns:** *number*
+
+Returns the size of the queue
 
 ## Methods
 
@@ -82,7 +88,9 @@ ___
 
 *Implementation of [IQueue](../interfaces/_queue_queue_.iqueue.md)*
 
-*Defined in [Queue/Queue.ts:43](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Queue/Queue.ts#L43)*
+*Defined in [Queue/Queue.ts:66](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Queue/Queue.ts#L66)*
+
+Foreach Iterator
 
 **Returns:** *Iterator‹T, any, undefined›*
 
@@ -94,7 +102,9 @@ ___
 
 *Implementation of [IQueue](../interfaces/_queue_queue_.iqueue.md)*
 
-*Defined in [Queue/Queue.ts:25](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Queue/Queue.ts#L25)*
+*Defined in [Queue/Queue.ts:36](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Queue/Queue.ts#L36)*
+
+Gets and remove next item in queue.
 
 **Returns:** *T*
 
@@ -106,13 +116,15 @@ ___
 
 *Implementation of [IQueue](../interfaces/_queue_queue_.iqueue.md)*
 
-*Defined in [Queue/Queue.ts:21](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Queue/Queue.ts#L21)*
+*Defined in [Queue/Queue.ts:28](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Queue/Queue.ts#L28)*
+
+Adds a new item to queue.
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`item` | T |
+Name | Type | Description |
+------ | ------ | ------ |
+`item` | T |   |
 
 **Returns:** *void*
 
@@ -124,6 +136,8 @@ ___
 
 *Implementation of [IQueue](../interfaces/_queue_queue_.iqueue.md)*
 
-*Defined in [Queue/Queue.ts:31](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Queue/Queue.ts#L31)*
+*Defined in [Queue/Queue.ts:45](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Queue/Queue.ts#L45)*
+
+Gets next item in queue.
 
 **Returns:** *T*

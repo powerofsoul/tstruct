@@ -50,7 +50,7 @@
 
 \+ **new Heap**(`compareFunction`: function): *[Heap](_heap_heap_.heap.md)*
 
-*Defined in [Heap/Heap.ts:29](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L29)*
+*Defined in [Heap/Heap.ts:29](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L29)*
 
 **Parameters:**
 
@@ -73,7 +73,7 @@ Name | Type |
 
 • **_data**: *T[]*
 
-*Defined in [Heap/Heap.ts:26](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L26)*
+*Defined in [Heap/Heap.ts:26](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L26)*
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 • **compareFunction**: *function*
 
-*Defined in [Heap/Heap.ts:32](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L32)*
+*Defined in [Heap/Heap.ts:32](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L32)*
 
 #### Type declaration:
 
@@ -100,7 +100,7 @@ Name | Type |
 
 • **get size**(): *number*
 
-*Defined in [Heap/Heap.ts:27](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L27)*
+*Defined in [Heap/Heap.ts:27](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L27)*
 
 **Returns:** *number*
 
@@ -112,7 +112,7 @@ Name | Type |
 
 *Implementation of [IHeap](../interfaces/_heap_heap_.iheap.md)*
 
-*Defined in [Heap/Heap.ts:117](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L117)*
+*Defined in [Heap/Heap.ts:117](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L117)*
 
 **Returns:** *Iterator‹T, any, undefined›*
 
@@ -124,7 +124,7 @@ ___
 
 *Implementation of [IHeap](../interfaces/_heap_heap_.iheap.md)*
 
-*Defined in [Heap/Heap.ts:53](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L53)*
+*Defined in [Heap/Heap.ts:53](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L53)*
 
 **Parameters:**
 
@@ -142,7 +142,7 @@ ___
 
 *Implementation of [IHeap](../interfaces/_heap_heap_.iheap.md)*
 
-*Defined in [Heap/Heap.ts:44](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L44)*
+*Defined in [Heap/Heap.ts:44](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L44)*
 
 **Returns:** *T*
 
@@ -152,7 +152,7 @@ ___
 
 ▸ **getChildrenIndex**(`index`: number): *number[]*
 
-*Defined in [Heap/Heap.ts:113](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L113)*
+*Defined in [Heap/Heap.ts:113](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L113)*
 
 **Parameters:**
 
@@ -168,7 +168,7 @@ ___
 
 ▸ **getParentIndex**(`index`: number): *number*
 
-*Defined in [Heap/Heap.ts:109](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L109)*
+*Defined in [Heap/Heap.ts:109](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L109)*
 
 **Parameters:**
 
@@ -186,7 +186,7 @@ ___
 
 *Implementation of [IHeap](../interfaces/_heap_heap_.iheap.md)*
 
-*Defined in [Heap/Heap.ts:40](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L40)*
+*Defined in [Heap/Heap.ts:40](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L40)*
 
 **Returns:** *T*
 
@@ -198,7 +198,7 @@ ___
 
 *Implementation of [IHeap](../interfaces/_heap_heap_.iheap.md)*
 
-*Defined in [Heap/Heap.ts:74](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L74)*
+*Defined in [Heap/Heap.ts:74](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L74)*
 
 **Parameters:**
 
@@ -216,6 +216,6 @@ ___
 
 *Implementation of [IHeap](../interfaces/_heap_heap_.iheap.md)*
 
-*Defined in [Heap/Heap.ts:105](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/Heap/Heap.ts#L105)*
+*Defined in [Heap/Heap.ts:105](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/Heap/Heap.ts#L105)*
 
 **Returns:** *T[]*

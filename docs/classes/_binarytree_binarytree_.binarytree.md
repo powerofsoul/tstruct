@@ -41,7 +41,7 @@
 
 • **_head**: *[IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›*
 
-*Defined in [BinaryTree/BinaryTree.ts:72](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L72)*
+*Defined in [BinaryTree/BinaryTree.ts:72](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/BinaryTree/BinaryTree.ts#L72)*
 
 ## Accessors
 
@@ -49,7 +49,7 @@
 
 • **get head**(): *[IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›*
 
-*Defined in [BinaryTree/BinaryTree.ts:74](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L74)*
+*Defined in [BinaryTree/BinaryTree.ts:74](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/BinaryTree/BinaryTree.ts#L74)*
 
 **Returns:** *[IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›*
 
@@ -61,7 +61,7 @@
 
 *Implementation of [IBinaryTree](../interfaces/_binarytree_binarytree_.ibinarytree.md)*
 
-*Defined in [BinaryTree/BinaryTree.ts:78](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L78)*
+*Defined in [BinaryTree/BinaryTree.ts:78](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/BinaryTree/BinaryTree.ts#L78)*
 
 **Parameters:**
 
@@ -77,7 +77,7 @@ ___
 
 ▸ **findBottomNode**(`node`: [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›): *[IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›*
 
-*Defined in [BinaryTree/BinaryTree.ts:126](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L126)*
+*Defined in [BinaryTree/BinaryTree.ts:126](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/BinaryTree/BinaryTree.ts#L126)*
 
 **Parameters:**
 
@@ -93,7 +93,7 @@ ___
 
 ▸ **findNode**(`value`: T, `node`: [IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›): *[IBinaryTreeNode](../interfaces/_binarytree_binarytree_.ibinarytreenode.md)‹T›*
 
-*Defined in [BinaryTree/BinaryTree.ts:154](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L154)*
+*Defined in [BinaryTree/BinaryTree.ts:154](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/BinaryTree/BinaryTree.ts#L154)*
 
 **Parameters:**
 
@@ -112,7 +112,7 @@ ___
 
 *Implementation of [IBinaryTree](../interfaces/_binarytree_binarytree_.ibinarytree.md)*
 
-*Defined in [BinaryTree/BinaryTree.ts:103](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L103)*
+*Defined in [BinaryTree/BinaryTree.ts:103](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/BinaryTree/BinaryTree.ts#L103)*
 
 **Parameters:**
 
@@ -130,7 +130,7 @@ ___
 
 *Implementation of [IBinaryTree](../interfaces/_binarytree_binarytree_.ibinarytree.md)*
 
-*Defined in [BinaryTree/BinaryTree.ts:131](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L131)*
+*Defined in [BinaryTree/BinaryTree.ts:131](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/BinaryTree/BinaryTree.ts#L131)*
 
 **Returns:** *T[]*
 
@@ -142,7 +142,7 @@ ___
 
 *Implementation of [IBinaryTree](../interfaces/_binarytree_binarytree_.ibinarytree.md)*
 
-*Defined in [BinaryTree/BinaryTree.ts:168](https://github.com/powerofsoul/tstruct/blob/c7939b3/src/BinaryTree/BinaryTree.ts#L168)*
+*Defined in [BinaryTree/BinaryTree.ts:168](https://github.com/powerofsoul/tstruct/blob/b1dd7f8/src/BinaryTree/BinaryTree.ts#L168)*
 
 **Parameters:**
 
