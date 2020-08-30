@@ -1,7 +1,7 @@
 {
   "name": "tstruct",
   "version": "0.0.11",
-  "description": "",
+  "description": "Data structures & basic algorithms library",
   "main": "./dist/index.js",
   "scripts": {
     "prepare": "rm -rf ./dist && npm run build:index && npm run build && npm run build:types && npm run clean:index",
@@ -39,5 +39,8 @@
     "typedoc-plugin-markdown": "^2.4.2",
     "typescript": "^3.9.7"
   },
-  "type": "tstruct"
+  "type": "tstruct",
+  "keywords": [
+    "data structures", "sorting", "heap", "linkedlist", "quicksort", "quickselect", "quickfind", "queue", "stack", "algorithms"
+  ]
 }
