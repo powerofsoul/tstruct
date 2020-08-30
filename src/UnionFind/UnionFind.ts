@@ -62,7 +62,7 @@ export class UnionFind<T> implements IUnionFind<T> {
     }
 
     public find(item: T): T {
-        let itemId = this.findIndex(item);
+        const itemId = this.findIndex(item);
 
         return this._idToObject.get(itemId);
     }
