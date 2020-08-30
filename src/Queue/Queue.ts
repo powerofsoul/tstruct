@@ -11,6 +11,9 @@ export interface IQueue<T> {
     [Symbol.iterator](): Iterator<T, any, undefined>;
 }
 
+/**
+ * Standard Queue based on Single Linked List
+ */
 export class Queue<T> implements IQueue<T> {
     private _list: LinkedList<T>;
 
@@ -18,29 +21,49 @@ export class Queue<T> implements IQueue<T> {
         this._list = new LinkedList<T>();
     }
 
-    enqueue(item: T): void {
+    /**
+     * Adds a new item to queue.
+     * @param item {T}
+     */
+    public enqueue(item: T): void {
         this._list.add(item);
     }
-    
-    dequeue(): T {
+
+    /**
+     * Gets and remove next item in queue.
+     * @return {T}
+     */
+    public dequeue(): T {
         const val = this._list.get(0);
         this._list.remove(0);
         return val;
     }
 
-    peek(): T {
+    /**
+     * Gets next item in queue.
+     */
+    public peek(): T {
         return this._list.get(0);
     }
 
-    get isEmpty(): boolean {
+    /**
+     * @return {boolean} Determine if the queue is empty or not
+     */
+    public get isEmpty(): boolean {
         return this._list.size == 0;
     }
 
-    get size(): number {
+    /**
+     * @return {number} Returns the size of the queue
+     */
+    public get size(): number {
         return this._list.size;
     }
 
-    [Symbol.iterator](): Iterator<T, any, undefined> {
+    /**
+     * Foreach Iterator
+     */
+    public [Symbol.iterator](): Iterator<T, any, undefined> {
         return this._list[Symbol.iterator]();
     }
 }
