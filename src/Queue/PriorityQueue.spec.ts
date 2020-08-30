@@ -40,4 +40,24 @@ describe("Priority queue tests", () => {
         highestPriority = priorityQueue.dequeue();
         expect(highestPriority).toBeUndefined();
     });
+
+    it("Peek tests", () => {
+        expect(priorityQueue.peek()).toBe(undefined);
+        priorityQueue.enqueue({
+            name: "Florin",
+            severity: 3
+        });
+        priorityQueue.enqueue({
+            name: "Andu",
+            severity: 99
+        });
+        priorityQueue.enqueue({
+            name: "Mihai",
+            severity: 33
+        });
+
+        expect(priorityQueue.peek().name).toBe("Andu");
+        priorityQueue.dequeue();
+        expect(priorityQueue.peek().name).toBe("Mihai");
+    });
 });

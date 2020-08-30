@@ -38,5 +38,34 @@ describe("Stack tests", () => {
         stack.push(1);
         expect(stack.pop()).toBe(1);
         expect(stack.pop()).toBeUndefined();
-    })
+    });
+
+    it("Size is correct", () => {
+        stack.push(1);
+        expect(stack.size).toBe(1);
+        stack.push(3);
+        expect(stack.size).toBe(2);
+        stack.pop();
+        expect(stack.size).toBe(1);
+        stack.pop();
+        expect(stack.size).toBe(0);
+        stack.pop();
+        expect(stack.size).toBe(0);
+    });
+
+    it.each`
+        elements
+        ${[1, 2, 3]}
+        ${[9, 9, 1, 5, 1, 2, 3]}
+    `(
+        "Stack iterator is correct",
+        ({ elements }: { elements: number[] }) => {
+            elements.forEach(e=> stack.push(e));
+            let i=0;
+            for(let s of stack){
+                expect(s).toBe(elements[i]);
+                i++;
+            }
+        }
+    );
 });

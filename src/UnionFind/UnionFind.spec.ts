@@ -47,6 +47,10 @@ describe("Union Find tests", () => {
         expect(unionFind.find(11)).toBe(9);
         expect(unionFind.find(-9)).toBe(9);
         expect(unionFind.find(9)).toBe(9);
+
+        unionFind.add(989);
+        unionFind.union(10, 989);
+        expect(unionFind.find(989)).toBe(unionFind.find(10));
     });
 
     it("Cannot add same item twice", () => {
@@ -58,5 +62,23 @@ describe("Union Find tests", () => {
         expect(unionFind.numberOfComponents).toBe(2);
         unionFind.add(2);
         expect(unionFind.numberOfComponents).toBe(2);
+    })
+
+    it("Union items that are already in union", () => {
+        unionFind.add(3);
+        unionFind.add(4);
+        expect(unionFind.numberOfComponents).toBe(2);
+        expect(unionFind.size(3)).toBe(1);
+        expect(unionFind.size(4)).toBe(1);
+        
+        unionFind.union(3, 4);
+        expect(unionFind.numberOfComponents).toBe(1);
+        expect(unionFind.size(3)).toBe(2);
+        expect(unionFind.size(4)).toBe(2);
+
+        unionFind.union(4, 3);
+        expect(unionFind.numberOfComponents).toBe(1);
+        expect(unionFind.size(3)).toBe(2);
+        expect(unionFind.size(4)).toBe(2);
     })
 });
