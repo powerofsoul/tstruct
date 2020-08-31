@@ -21,6 +21,7 @@ describe("Trie tests", () => {
         expect(trie.complete("Lon")).toEqual(["LongWord"]);
         trie.add("LongLand");
         expect(trie.complete("Lon")).toEqual(["LongWord", "LongLand"]);
+        expect(trie.complete("LongW")).toEqual(["LongWord"]);
         expect(trie.complete("Bla")).toEqual([]);
     })
 
