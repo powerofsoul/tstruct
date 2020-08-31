@@ -5,8 +5,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/powerofsoul/tstruct/badge.svg?branch=master)](https://coveralls.io/github/powerofsoul/tstruct?branch=master)
 
 <!-- End Badges -->
-## Docs
-[Docs](https://powerofsoul.github.io/tstruct)
+## [Docs](https://powerofsoul.github.io/tstruct)
+
 
 ## Installation
 ~~~
