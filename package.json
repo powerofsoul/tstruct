@@ -8,7 +8,7 @@
     "build:index": "cti ./src --fileexcludes *.spec.ts",
     "clean:index": "find ./src -name index.ts* | xargs rm",
     "build:types": "tsc -d",
-    "build:docs": "rm -rf docs && typedoc --exclude **/*.spec.ts --exclude **/index.ts",
+    "build:docs": "rm -rf docs && typedoc --exclude **/*.spec.ts --exclude **/index.ts && touch ./docs/.nojekyll",
     "build": "npm run lint && tsc",
     "test": "jest",
     "coverage": "jest --coverage=true && coveralls < coverage/lcov.info",
