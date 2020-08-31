@@ -6,7 +6,7 @@
 
 <!-- End Badges -->
 ## Docs
-[Generated Docs](docs/globals.md)
+[Generated Docs](https://tstruct.github.io)
 
 ## Installation
 ~~~
