@@ -6,6 +6,15 @@ import { PriorityQueue } from "../Queue/PriorityQueue";
 
 export type GetComparisonValueFunc<T, K> = (e: T) => K;
 
+/**
+ * Complexity O(n log n)
+ * @param elements Array of elements to be sorted
+ * @param getComparisonValue Callback for determining the comparison value
+ * @param compareFunction Callback that returns either -1,0,1
+ * -1 First value is less than second
+ * 0 Values are equal
+ * 1 First Value is greater than first
+ */
 export function HeapSort<T>(
     elements: T[],
     getComparisonValue: GetComparisonValueFunc<T, any> = (e: T) => e,
@@ -26,6 +35,15 @@ export function HeapSort<T>(
     return result;
 }
 
+/**
+ * Complexity O(n log n)
+ * @param elements Array of elements to be sorted
+ * @param getComparisonValue Callback for determining the comparison value
+ * @param compareFunction Callback that returns either -1,0,1
+ * -1 First value is less than second
+ * 0 Values are equal
+ * 1 First Value is greater than first
+ */
 export function QuickSort<T>(
     elements: T[],
     getComparisonValue: GetComparisonValueFunc<T, any> = (e: T) => e,
@@ -62,13 +80,13 @@ export function QuickSort<T>(
 }
 
 /**
- *
- * @param elements Array of T
- * @param getComparisonValue Function that returns a !positive! number used in sorting based on an item from elements
+ * Complexity O(n). 
+ * @param elements Array of elements to be sorted
+ * @param getElementValue Calpack to determine an element value
  */
 export function RadixSort<T>(
     elements: T[],
-    getComparisonValue: GetComparisonValueFunc<T, number>
+    getElementValue: GetComparisonValueFunc<T, number>
 ): T[] {
     let result: T[] = [...elements];
     const getDigitAt = (n: number, pos: number): number => {
@@ -85,7 +103,7 @@ export function RadixSort<T>(
         const arr = [];
 
         for (const e of result) {
-            let digit = getDigitAt(getComparisonValue(e), digitPos);
+            let digit = getDigitAt(getElementValue(e), digitPos);
 
             if (digit != undefined) {
                 hasDigits = true;
