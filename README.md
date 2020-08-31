@@ -28,6 +28,7 @@ npm install tstruct
 - Stack
 - Union Find
 - Trie
+- Graph
 
 ## Algorithms
 - Quick Sort
