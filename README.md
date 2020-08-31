@@ -6,7 +6,7 @@
 
 <!-- End Badges -->
 ## Docs
-[Generated Docs](https://tstruct.github.io)
+[Docs](https://powerofsoul.github.io/tstruct)
 
 ## Installation
 ~~~

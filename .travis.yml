@@ -10,7 +10,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TSTRUCT_PAGES_TOKEN
-  repo: powerofsoul/tstruct.github.io
   local_dir: docs
   keep_history: true
   on:
