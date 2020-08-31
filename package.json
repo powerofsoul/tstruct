@@ -51,6 +51,7 @@
     "quickfind",
     "queue",
     "stack",
-    "algorithms"
+    "algorithms",
+    "priority queue"
   ]
 }
