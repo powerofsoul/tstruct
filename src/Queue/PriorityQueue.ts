@@ -25,15 +25,15 @@ export class PriorityQueue<T> implements IPriorityQueue<T>{
         this._heap = new Heap(heapCompareFunction);
     }
 
-    enqueue(item: T): void {
+    public enqueue(item: T): void {
         this._heap.add(item);
     }
 
-    dequeue(): T {
+    public dequeue(): T {
         return this._heap.extractRoot();
     }
 
-    peek(): T {
+    public peek(): T {
         return this._heap.getRoot();
     }
 
