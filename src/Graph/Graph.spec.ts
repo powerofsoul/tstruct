@@ -228,7 +228,7 @@ describe("Graphs tests", () => {
         graph.connect({ from: 1, to: 2, weight: 3 });
         graph.connect({ from: 2, to: 3, weight: 1 });
         graph.connect({ from: 3, to: 4, weight: 1 });
-        graph.connect({ from: 2, to: 10, weight: 10 });
+        graph.connect({ from: 2, to: 4, weight: 10 });
         expect(graph.shortestPath(1, 4)).toStrictEqual([1, 2, 3, 4]);
 
         graph.connect({ from: 1, to: 4, weight: 10 });
@@ -239,4 +239,18 @@ describe("Graphs tests", () => {
         graph.connect({from: 5, to: 4, weight: 1});
         expect(graph.shortestPath(1, 4)).toStrictEqual([1, 5, 4]);
     });
+
+    it("Negative cycle is detected in bellman-ford", () => {
+        graph.add(1);
+        graph.add(2);
+        graph.add(3);
+        graph.add(4);
+
+        graph.connect({from: 1, to: 2, weight: -1});
+        graph.connect({from: 2, to: 3, weight: -1});
+        graph.connect({from: 3, to: 4, weight: -1});
+        expect(graph.shortestPath(1, 4)).toEqual([1,2,3,4]);
+        graph.connect({from: 4, to: 3, weight: -1});
+        expect(() => graph.shortestPath(1, 4)).toThrow("Negative Cycle Exists in Graph");
+    })
 });

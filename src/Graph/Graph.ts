@@ -24,7 +24,7 @@ export interface IGraph<T> {
 }
 
 export class Graph<T> implements IGraph<T> {
-    private _adjacencyList: Map<T, Map<T, Connection<T>>>;
+    private _adjacencyList: Map<T, PriorityQueue<Connection<T>>>;
 
     constructor() {
         this._adjacencyList = new Map();
@@ -32,7 +32,7 @@ export class Graph<T> implements IGraph<T> {
 
     public add(vertex: T): void {
         if (!this._adjacencyList.has(vertex)) {
-            this._adjacencyList.set(vertex, new Map());
+            this._adjacencyList.set(vertex, this.newConnectionPriorityQueue());
         }
     }
 
@@ -44,9 +44,16 @@ export class Graph<T> implements IGraph<T> {
             return;
         }
 
-        this._adjacencyList.get(connection.from).set(connection.to, connection);
+        const edges = this._adjacencyList.get(connection.from);
+        for (const e of edges) {
+            if (e.from == connection.from && e.to == connection.to) {
+                return;
+            }
+        }
+
+        edges.enqueue(connection);
         if (connection.bidirectional) {
-            this._adjacencyList.get(connection.to).set(connection.from, {
+            edges.enqueue({
                 ...connection,
                 from: connection.to,
                 to: connection.from,
@@ -68,9 +75,7 @@ export class Graph<T> implements IGraph<T> {
                 return true;
             }
 
-            for (const edge of this._adjacencyList
-                .get(currentLocation)
-                .values()) {
+            for (const edge of this._adjacencyList.get(currentLocation)) {
                 if (check(edge.to, [...haveBeenHere, currentLocation])) {
                     return true;
                 }
@@ -96,13 +101,10 @@ export class Graph<T> implements IGraph<T> {
      * @param {T} vertex
      */
     public getEdges(): Connection<T>[] {
-        const result = new PriorityQueue<Connection<T>>(
-            (c) => c?.weight || 0,
-            ascendingCompareFunction
-        );
+        const result = this.newConnectionPriorityQueue();
 
-        for (const e of this._adjacencyList.values()) {
-            for (const edge of e.values()) {
+        for (const edges of this._adjacencyList.values()) {
+            for (const edge of edges) {
                 result.enqueue(edge);
             }
         }
@@ -117,15 +119,14 @@ export class Graph<T> implements IGraph<T> {
     public getEdgesFor(vertex: T): Connection<T>[] {
         if (!this._adjacencyList.has(vertex)) return [];
 
+        const result: Connection<T>[] = [];
         const edges = this._adjacencyList.get(vertex);
-        const priorityQueue = new PriorityQueue<Connection<T>>(
-            (e) => e?.weight
-        );
-        for (const e of edges.values()) {
-            priorityQueue.enqueue(e);
+
+        for (const edge of edges) {
+            result.push(edge);
         }
 
-        return priorityQueue.toArray();
+        return result;
     }
 
     /**
@@ -171,52 +172,66 @@ export class Graph<T> implements IGraph<T> {
      * @param {T} to Vertex
      */
     private bellmanFord(from: T, to: T): T[] {
-        const distances = new Map<T, {
-            distance: number,
-            previous?: T
-        }>();
+        const distances = new Map<
+            T,
+            {
+                distance: number;
+                previous?: T;
+            }
+        >();
 
-        const nodes = this.getVertices();
-        for (const node of nodes) {
-            distances.set(node, {
-                distance: node == from ? 0 : Number.MAX_SAFE_INTEGER
+        const vertices = this.getVertices();
+        for (const vertex of vertices) {
+            distances.set(vertex, {
+                distance: vertex == from ? 0 : Number.MAX_SAFE_INTEGER,
             });
         }
 
-        const find = (vertex = from, distance = 0) => {
+        const find = (vertex = from) => {
             const currentNodeEdges = this.getEdgesFor(vertex);
             for (var e of currentNodeEdges) {
-                const newDistance = distance + (e.weight || 0);
+                const newDistance = distances.get(e.from).distance + (e.weight || 0);
 
                 if (distances.get(e.to).distance > newDistance) {
                     distances.set(e.to, {
                         distance: newDistance,
-                        previous: vertex
+                        previous: vertex,
                     });
 
-                    if(e.to != to) {
-                        find(e.to, newDistance);
+                    if (e.to != to) {
+                        find(e.to);
                     }
                 }
             }
         };
 
         find();
+
         const edges = this.getEdges();
         for (const e of edges) {
-            if (distances.get(e.from).distance + e?.weight < distances.get(e.to).distance) {
+            if (
+                distances.get(e.from).distance + e?.weight <
+                distances.get(e.to).distance
+            ) {
                 throw "Negative Cycle Exists in Graph";
             }
         }
 
         let vertex = distances.get(to);
         const path = [];
-        while(vertex.previous != undefined) {
+        while (vertex.previous != undefined) {
             path.unshift(vertex.previous);
             vertex = distances.get(vertex.previous);
         }
-        
+
         path.push(to);
         return path;
+    }
+
+    private newConnectionPriorityQueue() {
+        return new PriorityQueue<Connection<T>>(
+            (e) => e?.weight || 0,
+            ascendingCompareFunction
+        );
     }
 }
