@@ -1,4 +1,5 @@
 import { IGraph, Graph } from "./Graph";
+
 describe("Graphs tests", () => {
     let graph: IGraph<number>;
 
@@ -147,5 +148,63 @@ describe("Graphs tests", () => {
                 to: 6,
             })
         ).toBe(true);
+    });
+
+    it("Minimum spanning tree", () => {
+        graph.add(1);
+        graph.add(2);
+        graph.add(3);
+        graph.add(4);
+
+        graph.connect({
+            from: 1,
+            to: 2,
+            weight: 2,
+        });
+        graph.connect({
+            from: 2,
+            to: 3,
+            weight: 4,
+        });
+        graph.connect({
+            from: 3,
+            to: 4,
+            weight: 5,
+        });
+
+        graph.connect({
+            from: 1,
+            to: 3,
+            weight: 1,
+        });
+        graph.connect({
+            from: 2,
+            to: 4,
+            weight: 10,
+        });
+
+        graph.connect({
+            from: 4,
+            to: 2,
+            weight: 11,
+        });
+
+        const mst = graph.minimumSpanningTree();
+        expect(mst.getEdges()).toEqual([
+            { from: 1, to: 3, weight: 1 },
+            { from: 1, to: 2, weight: 2 },
+            { from: 3, to: 4, weight: 5 },
+        ]);
+
+        const nodes = mst.getNodes();
+        const firstNode = nodes[0];
+        for (const node of nodes) {
+            expect(
+                mst.connectionExists({
+                    from: firstNode,
+                    to: node,
+                })
+            );
+        }
     });
 });
