@@ -109,7 +109,7 @@ export class Graph<T> implements IGraph<T> {
      * Complexity O(V+E)
      * It uses Kruskal's Algorithm
      * @returns {Graph<T>} 
-     * @returns undefined if graph have unconnected vertices
+     * @returns {undefined} if graph have unconnected vertices
      */
     public minimumSpanningTree(): Graph<T> {
         const unionFind = new UnionFind<T>();
