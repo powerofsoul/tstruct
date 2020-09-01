@@ -26,9 +26,11 @@ export interface IGraph<T> {
 
 export class Graph<T> implements IGraph<T> {
     private _adjacencyList: Map<T, PriorityQueue<Connection<T>>>;
+    private _hasNegativeWeights: boolean;
 
     constructor() {
         this._adjacencyList = new Map();
+        this._hasNegativeWeights = false;
     }
 
     public add(vertex: T): void {
@@ -53,6 +55,10 @@ export class Graph<T> implements IGraph<T> {
         }
 
         edges.enqueue(connection);
+        if (connection.weight < 0) {
+            this._hasNegativeWeights = true;
+        }
+
         if (connection.bidirectional) {
             edges.enqueue({
                 ...connection,
@@ -162,8 +168,11 @@ export class Graph<T> implements IGraph<T> {
     }
 
     public shortestPath(from: T, to: T) {
-        //TODO Add Dijkstra if there are no negative weights
-        return this.bellmanFord(from, to).path;
+        if (this._hasNegativeWeights) {
+            return this.bellmanFord(from, to).path;
+        } else {
+            return this.dijkstra(from, to).path;
+        }
     }
 
     /**
@@ -172,8 +181,8 @@ export class Graph<T> implements IGraph<T> {
      * @param {T} from Vertex
      * @param {T} to Vertex
      */
-    private bellmanFord(from: T, to: T) {
-        const distances = new Map<T, {distance: number, previous?: T}>();
+    public bellmanFord(from: T, to: T) {
+        const distances = new Map<T, { distance: number; previous?: T }>();
 
         const vertices = this.getVertices();
         for (const vertex of vertices) {
@@ -186,12 +195,13 @@ export class Graph<T> implements IGraph<T> {
 
         for (let i = 0; i < vertices.length; i++) {
             for (const edge of edges) {
-                const newDistance = distances.get(edge.from).distance + edge.weight;
+                const newDistance =
+                    distances.get(edge.from).distance + edge.weight;
 
                 if (newDistance < distances.get(edge.to).distance) {
                     distances.set(edge.to, {
                         distance: newDistance,
-                        previous: edge.from
+                        previous: edge.from,
                     });
                 }
             }
@@ -213,13 +223,77 @@ export class Graph<T> implements IGraph<T> {
             distance = distances.get(distance.previous);
         }
 
-        if(path.length > 0) {
+        if (path.length > 0) {
             path.push(to);
         }
 
         return {
             distance: distance.distance,
-            path
+            path,
+        };
+    }
+
+    //TODO Refactor
+    /**
+     * Requires no negative weights
+     * Complexity O(V + E log V)
+     * @param {T} from 
+     * @param {T} to 
+     */
+    public dijkstra(from: T, to: T) {
+        if (this._hasNegativeWeights) {
+            throw "Dijkstra only works on graph with no negative weights";
+        }
+
+        type D = { distance: number; vertex: T; previous?: T };
+
+        const distances = new Map<T, D>();
+        const priorityQueue = new PriorityQueue<D>(
+            (e) => e?.distance,
+            ascendingCompareFunction
+        );
+
+        const vertices = this.getVertices();
+        for (const vertex of vertices) {
+            const distance = {
+                distance: vertex == from ? 0 : Number.MAX_SAFE_INTEGER,
+                vertex,
+            };
+
+            distances.set(vertex, distance);
+            priorityQueue.enqueue(distance);
+        }
+
+        while (!priorityQueue.isEmpty) {
+            const distance = priorityQueue.dequeue();
+            const edges = this.getEdgesFor(distance.vertex);
+            for (const e of edges) {
+                const newWeight = distances.get(e.from).distance + e.weight;
+
+                if (newWeight < distances.get(e.to).distance) {
+                    const obj = distances.get(e.to);
+                    obj.distance = newWeight;
+                    obj.previous = e.from;
+                    priorityQueue.rearrange(); // because we are changing the reference we need to make sure 
+                                               // priority queue will dequeue the correct element
+                }
+            }
+        }
+
+        let distance = distances.get(to);
+        const path = [];
+        while (distance?.previous != undefined) {
+            path.unshift(distance.previous);
+            distance = distances.get(distance.previous);
+        }
+
+        if (path.length > 0) {
+            path.push(to);
+        }
+
+        return {
+            distance: distance.distance,
+            path,
         };
     }
 

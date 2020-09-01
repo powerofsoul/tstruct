@@ -6,6 +6,7 @@ export interface IPriorityQueue<T> {
     dequeue(): T;
     peek(): T;
     toArray(): T[];
+    rearrange():void;
 
     readonly size: number;
     readonly isEmpty: boolean;
@@ -27,6 +28,10 @@ export class PriorityQueue<T> implements IPriorityQueue<T> {
             return compareFunction(ePriority, e2Priority);
         };
         this._heap = new Heap(heapCompareFunction);
+    }
+
+    public rearrange(): void {
+        this._heap.rearrange();
     }
 
     public enqueue(item: T): void {

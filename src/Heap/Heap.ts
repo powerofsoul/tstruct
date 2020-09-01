@@ -1,4 +1,7 @@
-import { descendingCompareFunction, ascendingCompareFunction } from "../CompareFunction";
+import {
+    descendingCompareFunction,
+    ascendingCompareFunction,
+} from "../CompareFunction";
 
 export interface IHeap<T> {
     add(value: T): void;
@@ -7,6 +10,7 @@ export interface IHeap<T> {
     extractRoot(): T;
 
     toArray(): T[];
+    rearrange(): void;
 
     readonly size: number;
     [Symbol.iterator](): Iterator<T, any, undefined>;
@@ -43,7 +47,7 @@ export class Heap<T> implements IHeap<T> {
 
     public extractRoot(): T {
         const root = this._data[0];
-        if(root != undefined) {
+        if (root != undefined) {
             this.remove(root);
         }
 
@@ -52,52 +56,68 @@ export class Heap<T> implements IHeap<T> {
 
     public add(value: T): void {
         this._data.push(value);
-        if(this.size == 1) return;
-        
-        let currentId = this.size - 1;
-        let parentId = this.getParentIndex(this.size - 1);
+        if (this.size == 1) return;
+
+        this._rearrange(this.size - 1);
+    }
+
+    public rearrange() {
+        for (let i = 0; i < this.size; i++) {
+            this._rearrange(i);
+        }
+    }
+
+    public _rearrange(index: number) {
+        let parentId = this.getParentIndex(index);
 
         while (
-            this.compareFunction(this._data[parentId], this._data[currentId]) <
-                0 &&
-            currentId > 0
+            this.compareFunction(this._data[parentId], this._data[index]) < 0 &&
+            index > 0
         ) {
             const tmp = this._data[parentId];
-            this._data[parentId] = this._data[currentId];
-            this._data[currentId] = tmp;
+            this._data[parentId] = this._data[index];
+            this._data[index] = tmp;
 
-            currentId = parentId;
-            parentId = this.getParentIndex(currentId);
+            index = parentId;
+            parentId = this.getParentIndex(index);
         }
     }
 
     public remove(value: T): void {
-        let index = this._data.findIndex(v=> v == value);
-        if(index<0) return;
+        let index = this._data.findIndex((v) => v == value);
+        if (index < 0) return;
 
         const elem = this._data.pop();
-        if(index >= this.size) return;
+        if (index >= this.size) return;
 
         this._data[index] = elem;
-        while(index < this.size) {
+        while (index < this.size) {
             const children = this.getChildrenIndex(index);
-            if(children[0] >= this.size && children[1] >= this.size) {
+            if (children[0] >= this.size && children[1] >= this.size) {
                 break;
             }
 
-            const childrenValues = children.map( i=> this._data[i]);
-            if(this.compareFunction(childrenValues[0], this._data[index]) < 0 && this.compareFunction(childrenValues[1], this._data[index]) < 0) {
+            const childrenValues = children.map((i) => this._data[i]);
+            if (
+                this.compareFunction(childrenValues[0], this._data[index]) <
+                    0 &&
+                this.compareFunction(childrenValues[1], this._data[index]) < 0
+            ) {
                 break;
             }
 
-            if(this.compareFunction(childrenValues[0], childrenValues[1]) > 0 || childrenValues[1] ==  undefined) {
+            if (
+                this.compareFunction(childrenValues[0], childrenValues[1]) >
+                    0 ||
+                childrenValues[1] == undefined
+            ) {
                 this._data[children[0]] = this._data[index];
                 this._data[index] = childrenValues[0];
-                index=children[0];
+                index = children[0];
             } else {
                 this._data[children[1]] = this._data[index];
                 this._data[index] = childrenValues[1];
-                index=children[1];
+                index = children[1];
             }
         }
     }
@@ -107,7 +127,7 @@ export class Heap<T> implements IHeap<T> {
     }
 
     private getParentIndex(index: number) {
-        return Math.floor((index-1) / 2);
+        return Math.floor((index - 1) / 2);
     }
 
     private getChildrenIndex(index: number) {
@@ -117,7 +137,6 @@ export class Heap<T> implements IHeap<T> {
     public [Symbol.iterator](): Iterator<T, any, undefined> {
         return this._data[Symbol.iterator]();
     }
-
 }
 
 export class MaxHeap<T> extends Heap<T> implements IMaxHeap<T> {

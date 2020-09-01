@@ -31,6 +31,7 @@ npm install tstruct
 - Graph
     - Minimum Spanning Tree
     - Bellman-Ford 
+    - Dijkstra
 
 ## Algorithms
 - Quick Sort
