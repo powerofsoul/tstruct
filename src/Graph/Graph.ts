@@ -163,26 +163,31 @@ export class Graph<T> implements IGraph<T> {
      * @param {T} to Vertex
      */
     private bellmanFord(from: T, to: T): T[] {
-        const distances = new Map<T, number>();
+        const distances = new Map<T, {
+            distance: number,
+            previous?: T
+        }>();
+
         const nodes = this.getVertices();
         for (const node of nodes) {
-            distances.set(node, node == from ? 0 : Number.MAX_SAFE_INTEGER);
+            distances.set(node, {
+                distance: node == from ? 0 : Number.MAX_SAFE_INTEGER
+            });
         }
 
-        let finalPath: T[] = [];
-
-        const find = (vertex = from, distance = 0, path: T[] = [from]) => {
+        const find = (vertex = from, distance = 0) => {
             const currentNodeEdges = this.getEdgesFor(vertex);
             for (var e of currentNodeEdges) {
                 const newDistance = distance + (e.weight || 0);
 
-                if (distances.get(e.to) > newDistance) {
-                    distances.set(e.to, newDistance);
+                if (distances.get(e.to).distance > newDistance) {
+                    distances.set(e.to, {
+                        distance: newDistance,
+                        previous: vertex
+                    });
 
-                    if (e.to == to) {
-                        finalPath = [...path, e.to];
-                    } else {
-                        find(e.to, newDistance, [...path, e.to]);
+                    if(e.to != to) {
+                        find(e.to, newDistance);
                     }
                 }
             }
@@ -191,11 +196,19 @@ export class Graph<T> implements IGraph<T> {
         find();
         const edges = this.getEdges();
         for (const e of edges) {
-            if (distances.get(e.from) + e?.weight < distances.get(e.to) && e.bidirectional) {
+            if (distances.get(e.from).distance + e?.weight < distances.get(e.to).distance) {
                 throw "Negative Cycle Exists in Graph";
             }
         }
 
-        return finalPath;
+        let vertex = distances.get(to);
+        const path = [];
+        while(vertex.previous != undefined) {
+            path.unshift(vertex.previous);
+            vertex = distances.get(vertex.previous);
+        }
+        
+        path.push(to);
+        return path;
     }
 }
