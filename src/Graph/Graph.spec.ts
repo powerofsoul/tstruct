@@ -207,4 +207,15 @@ describe("Graphs tests", () => {
             );
         }
     });
+
+    it("Minimum spanning tree will return undefined if there are unconnected vertices", ()=>{
+        graph.add(1);
+        graph.add(2);
+        graph.add(3);
+
+        graph.connect({from: 1, to: 2});
+        expect(graph.minimumSpanningTree()).toBe(undefined);
+        graph.connect({from: 1, to: 3});
+        expect(graph.minimumSpanningTree()?.getEdges().length).toBe(2);
+    })
 });
