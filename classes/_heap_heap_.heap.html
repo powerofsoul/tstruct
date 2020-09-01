@@ -126,11 +126,13 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_heap_heap_.heap.html#_symbol_iterator_" class="tsd-kind-icon">[<wbr>Symbol.iterator]</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_heap_heap_.heap.html#_rearrange" class="tsd-kind-icon">_rearrange</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_heap_heap_.heap.html#add" class="tsd-kind-icon">add</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_heap_heap_.heap.html#extractroot" class="tsd-kind-icon">extract<wbr>Root</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_heap_heap_.heap.html#getchildrenindex" class="tsd-kind-icon">get<wbr>Children<wbr>Index</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_heap_heap_.heap.html#getparentindex" class="tsd-kind-icon">get<wbr>Parent<wbr>Index</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_heap_heap_.heap.html#getroot" class="tsd-kind-icon">get<wbr>Root</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_heap_heap_.heap.html#rearrange" class="tsd-kind-icon">rearrange</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_heap_heap_.heap.html#remove" class="tsd-kind-icon">remove</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_heap_heap_.heap.html#toarray" class="tsd-kind-icon">to<wbr>Array</a></li>
 							</ul>
@@ -150,7 +152,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Heap/Heap.ts#L29">Heap/Heap.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L33">Heap/Heap.ts:33</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -193,7 +195,7 @@
 					<div class="tsd-signature tsd-kind-icon">_data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Heap/Heap.ts#L26">Heap/Heap.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L30">Heap/Heap.ts:30</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -203,7 +205,7 @@
 					<div class="tsd-signature tsd-kind-icon">compare<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>e1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, e2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">-1</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">1</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Heap/Heap.ts#L32">Heap/Heap.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L36">Heap/Heap.ts:36</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -244,7 +246,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Heap/Heap.ts#L27">Heap/Heap.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L31">Heap/Heap.ts:31</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -265,10 +267,33 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_heap_heap_.iheap.html">IHeap</a>.<a href="../interfaces/_heap_heap_.iheap.html#_symbol_iterator_">[Symbol.iterator]</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Heap/Heap.ts#L117">Heap/Heap.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L137">Heap/Heap.ts:137</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Iterator</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="_rearrange" class="tsd-anchor"></a>
+					<h3>_rearrange</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">_rearrange<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L70">Heap/Heap.ts:70</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -283,7 +308,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_heap_heap_.iheap.html">IHeap</a>.<a href="../interfaces/_heap_heap_.iheap.html#add">add</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Heap/Heap.ts#L53">Heap/Heap.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L57">Heap/Heap.ts:57</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -307,7 +332,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_heap_heap_.iheap.html">IHeap</a>.<a href="../interfaces/_heap_heap_.iheap.html#extractroot">extractRoot</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Heap/Heap.ts#L44">Heap/Heap.ts:44</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L48">Heap/Heap.ts:48</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
@@ -324,7 +349,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Heap/Heap.ts#L113">Heap/Heap.ts:113</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L133">Heap/Heap.ts:133</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -347,7 +372,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Heap/Heap.ts#L109">Heap/Heap.ts:109</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L129">Heap/Heap.ts:129</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -371,10 +396,28 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_heap_heap_.iheap.html">IHeap</a>.<a href="../interfaces/_heap_heap_.iheap.html#getroot">getRoot</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Heap/Heap.ts#L40">Heap/Heap.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L44">Heap/Heap.ts:44</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="rearrange" class="tsd-anchor"></a>
+					<h3>rearrange</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">rearrange<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_heap_heap_.iheap.html">IHeap</a>.<a href="../interfaces/_heap_heap_.iheap.html#rearrange">rearrange</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L64">Heap/Heap.ts:64</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -389,7 +432,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_heap_heap_.iheap.html">IHeap</a>.<a href="../interfaces/_heap_heap_.iheap.html#remove">remove</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Heap/Heap.ts#L74">Heap/Heap.ts:74</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L86">Heap/Heap.ts:86</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -413,7 +456,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_heap_heap_.iheap.html">IHeap</a>.<a href="../interfaces/_heap_heap_.iheap.html#toarray">toArray</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Heap/Heap.ts#L105">Heap/Heap.ts:105</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Heap/Heap.ts#L125">Heap/Heap.ts:125</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -495,6 +538,9 @@
 								<a href="_heap_heap_.heap.html#_symbol_iterator_" class="tsd-kind-icon">[<wbr>Symbol.iterator]</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_heap_heap_.heap.html#_rearrange" class="tsd-kind-icon">_rearrange</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_heap_heap_.heap.html#add" class="tsd-kind-icon">add</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -508,6 +554,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_heap_heap_.heap.html#getroot" class="tsd-kind-icon">get<wbr>Root</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_heap_heap_.heap.html#rearrange" class="tsd-kind-icon">rearrange</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_heap_heap_.heap.html#remove" class="tsd-kind-icon">remove</a>

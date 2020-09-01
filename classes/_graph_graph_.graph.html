@@ -105,15 +105,17 @@
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_graph_graph_.graph.html#_adjacencylist" class="tsd-kind-icon">_adjacency<wbr>List</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_graph_graph_.graph.html#_hasnegativeweights" class="tsd-kind-icon">_has<wbr>Negative<wbr>Weights</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_graph_graph_.graph.html#add" class="tsd-kind-icon">add</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_graph_graph_.graph.html#bellmanford" class="tsd-kind-icon">bellman<wbr>Ford</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_graph_graph_.graph.html#bellmanford" class="tsd-kind-icon">bellman<wbr>Ford</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_graph_graph_.graph.html#connect" class="tsd-kind-icon">connect</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_graph_graph_.graph.html#connectionexists" class="tsd-kind-icon">connection<wbr>Exists</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_graph_graph_.graph.html#dijkstra" class="tsd-kind-icon">dijkstra</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_graph_graph_.graph.html#exists" class="tsd-kind-icon">exists</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_graph_graph_.graph.html#getedges" class="tsd-kind-icon">get<wbr>Edges</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_graph_graph_.graph.html#getedgesfor" class="tsd-kind-icon">get<wbr>Edges<wbr>For</a></li>
@@ -138,7 +140,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Graph/Graph.ts#L28">Graph/Graph.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L29">Graph/Graph.ts:29</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_graph_graph_.graph.html" class="tsd-signature-type">Graph</a></h4>
@@ -154,7 +156,17 @@
 					<div class="tsd-signature tsd-kind-icon">_adjacency<wbr>List<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="_queue_priorityqueue_.priorityqueue.html" class="tsd-signature-type">PriorityQueue</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_graph_graph_.connection.html" class="tsd-signature-type">Connection</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Graph/Graph.ts#L28">Graph/Graph.ts:28</a></li>
+							<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L28">Graph/Graph.ts:28</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_hasnegativeweights" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _has<wbr>Negative<wbr>Weights</h3>
+					<div class="tsd-signature tsd-kind-icon">_has<wbr>Negative<wbr>Weights<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L29">Graph/Graph.ts:29</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -172,7 +184,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_graph_graph_.igraph.html">IGraph</a>.<a href="../interfaces/_graph_graph_.igraph.html#add">add</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Graph/Graph.ts#L34">Graph/Graph.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L36">Graph/Graph.ts:36</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -185,17 +197,17 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="bellmanford" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> bellman<wbr>Ford</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<h3>bellman<wbr>Ford</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">bellman<wbr>Ford<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Graph/Graph.ts#L175">Graph/Graph.ts:175</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L184">Graph/Graph.ts:184</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -242,7 +254,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_graph_graph_.igraph.html">IGraph</a>.<a href="../interfaces/_graph_graph_.igraph.html#connect">connect</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Graph/Graph.ts#L40">Graph/Graph.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L42">Graph/Graph.ts:42</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -266,7 +278,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_graph_graph_.igraph.html">IGraph</a>.<a href="../interfaces/_graph_graph_.igraph.html#connectionexists">connectionExists</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Graph/Graph.ts#L69">Graph/Graph.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L75">Graph/Graph.ts:75</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -276,6 +288,40 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="dijkstra" class="tsd-anchor"></a>
+					<h3>dijkstra</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">dijkstra<span class="tsd-signature-symbol">(</span>from<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, to<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L237">Graph/Graph.ts:237</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>from: <span class="tsd-signature-type">T</span></h5>
+								</li>
+								<li>
+									<h5>to: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>distance<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
 						</li>
 					</ul>
 				</section>
@@ -290,7 +336,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_graph_graph_.igraph.html">IGraph</a>.<a href="../interfaces/_graph_graph_.igraph.html#exists">exists</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Graph/Graph.ts#L65">Graph/Graph.ts:65</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L71">Graph/Graph.ts:71</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -314,7 +360,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_graph_graph_.igraph.html">IGraph</a>.<a href="../interfaces/_graph_graph_.igraph.html#getedges">getEdges</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Graph/Graph.ts#L104">Graph/Graph.ts:104</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L110">Graph/Graph.ts:110</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -337,7 +383,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_graph_graph_.igraph.html">IGraph</a>.<a href="../interfaces/_graph_graph_.igraph.html#getedgesfor">getEdgesFor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Graph/Graph.ts#L120">Graph/Graph.ts:120</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L126">Graph/Graph.ts:126</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -368,7 +414,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_graph_graph_.igraph.html">IGraph</a>.<a href="../interfaces/_graph_graph_.igraph.html#getvertices">getVertices</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Graph/Graph.ts#L91">Graph/Graph.ts:91</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L97">Graph/Graph.ts:97</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -386,7 +432,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_graph_graph_.igraph.html">IGraph</a>.<a href="../interfaces/_graph_graph_.igraph.html#minimumspanningtree">minimumSpanningTree</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Graph/Graph.ts#L139">Graph/Graph.ts:139</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L145">Graph/Graph.ts:145</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -409,7 +455,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Graph/Graph.ts#L226">Graph/Graph.ts:226</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L294">Graph/Graph.ts:294</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_queue_priorityqueue_.priorityqueue.html" class="tsd-signature-type">PriorityQueue</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_graph_graph_.connection.html" class="tsd-signature-type">Connection</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -427,7 +473,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_graph_graph_.igraph.html">IGraph</a>.<a href="../interfaces/_graph_graph_.igraph.html#shortestpath">shortestPath</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/abf0a52/src/Graph/Graph.ts#L164">Graph/Graph.ts:164</a></li>
+									<li>Defined in <a href="https://github.com/powerofsoul/tstruct/blob/1127441/src/Graph/Graph.ts#L170">Graph/Graph.ts:170</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -508,10 +554,13 @@
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
 								<a href="_graph_graph_.graph.html#_adjacencylist" class="tsd-kind-icon">_adjacency<wbr>List</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_graph_graph_.graph.html#_hasnegativeweights" class="tsd-kind-icon">_has<wbr>Negative<wbr>Weights</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_graph_graph_.graph.html#add" class="tsd-kind-icon">add</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_graph_graph_.graph.html#bellmanford" class="tsd-kind-icon">bellman<wbr>Ford</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -519,6 +568,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_graph_graph_.graph.html#connectionexists" class="tsd-kind-icon">connection<wbr>Exists</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_graph_graph_.graph.html#dijkstra" class="tsd-kind-icon">dijkstra</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_graph_graph_.graph.html#exists" class="tsd-kind-icon">exists</a>
