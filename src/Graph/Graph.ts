@@ -162,23 +162,17 @@ export class Graph<T> implements IGraph<T> {
 
     public shortestPath(from: T, to: T) {
         //TODO Add Dijkstra if there are no negative weights
-        return this.bellmanFord(from, to);
+        return this.bellmanFord(from, to).path;
     }
 
     /**
      * Requires no negative cycles
-     * Complexity O(V+E)
+     * Complexity O(VE)
      * @param {T} from Vertex
      * @param {T} to Vertex
      */
-    private bellmanFord(from: T, to: T): T[] {
-        const distances = new Map<
-            T,
-            {
-                distance: number;
-                previous?: T;
-            }
-        >();
+    private bellmanFord(from: T, to: T) {
+        const distances = new Map<T, {distance: number, previous?: T}>();
 
         const vertices = this.getVertices();
         for (const vertex of vertices) {
@@ -187,27 +181,21 @@ export class Graph<T> implements IGraph<T> {
             });
         }
 
-        const find = (vertex = from) => {
-            const currentNodeEdges = this.getEdgesFor(vertex);
-            for (var e of currentNodeEdges) {
-                const newDistance = distances.get(e.from).distance + (e.weight || 0);
+        const edges = this.getEdges();
 
-                if (distances.get(e.to).distance > newDistance) {
-                    distances.set(e.to, {
+        for (let i = 0; i < vertices.length; i++) {
+            for (const edge of edges) {
+                const newDistance = distances.get(edge.from).distance + edge.weight;
+
+                if (newDistance < distances.get(edge.to).distance) {
+                    distances.set(edge.to, {
                         distance: newDistance,
-                        previous: vertex,
+                        previous: edge.from
                     });
-
-                    if (e.to != to) {
-                        find(e.to);
-                    }
                 }
             }
-        };
+        }
 
-        find();
-
-        const edges = this.getEdges();
         for (const e of edges) {
             if (
                 distances.get(e.from).distance + e?.weight <
@@ -217,15 +205,21 @@ export class Graph<T> implements IGraph<T> {
             }
         }
 
-        let vertex = distances.get(to);
+        let distance = distances.get(to);
         const path = [];
-        while (vertex.previous != undefined) {
-            path.unshift(vertex.previous);
-            vertex = distances.get(vertex.previous);
+        while (distance?.previous != undefined) {
+            path.unshift(distance.previous);
+            distance = distances.get(distance.previous);
         }
 
-        path.push(to);
-        return path;
+        if(path.length > 0) {
+            path.push(to);
+        }
+
+        return {
+            distance: distance.distance,
+            path
+        };
     }
 
     private newConnectionPriorityQueue() {

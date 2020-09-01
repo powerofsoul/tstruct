@@ -253,4 +253,12 @@ describe("Graphs tests", () => {
         graph.connect({from: 4, to: 3, weight: -1});
         expect(() => graph.shortestPath(1, 4)).toThrow("Negative Cycle Exists in Graph");
     })
+
+    it("Graph return empty array when no path between 2 vertices", () => {
+        graph.add(3);
+        graph.add(4);
+        expect(graph.shortestPath(3,4)).toEqual([]);
+        graph.connect({from: 3, to: 4, weight: 1})
+        expect(graph.shortestPath(3,4)).toEqual([3, 4]);
+    })
 });
