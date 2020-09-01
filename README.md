@@ -29,6 +29,8 @@ npm install tstruct
 - Union Find
 - Trie
 - Graph
+    - Minimum Spanning Tree
+    - Bellman-Ford 
 
 ## Algorithms
 - Quick Sort
