@@ -91,6 +91,10 @@ export class Graph<T> implements IGraph<T> {
         return result;
     }
 
+    /**
+     * Gets all edges in sorted ascending order
+     * @param {T} vertex
+     */
     public getEdges(): Connection<T>[] {
         const result = new PriorityQueue<Connection<T>>(
             (c) => c?.weight || 0,
@@ -106,6 +110,10 @@ export class Graph<T> implements IGraph<T> {
         return result.toArray();
     }
 
+    /**
+     * Gets all edges for vertex in sorted ascending order
+     * @param {T} vertex
+     */
     public getEdgesFor(vertex: T): Connection<T>[] {
         if (!this._adjacencyList.has(vertex)) return [];
 
