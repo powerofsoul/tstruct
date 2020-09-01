@@ -16,7 +16,7 @@ describe("Graphs tests", () => {
         graph.add(44);
         expect(graph.exists(44)).toBe(true);
 
-        expect(graph.getNodes()).toEqual([3, 44]);
+        expect(graph.getVertices()).toEqual([3, 44]);
     });
 
     it("I can create connections", () => {
@@ -67,13 +67,13 @@ describe("Graphs tests", () => {
 
     it("I should not be able to connect nonexisting nodes", () => {
         expect(graph.getEdges()).toEqual([]);
-        expect(graph.getNodes()).toEqual([]);
+        expect(graph.getVertices()).toEqual([]);
         graph.connect({
             from: 3,
             to: 99,
         });
         expect(graph.getEdges()).toEqual([]);
-        expect(graph.getNodes()).toEqual([]);
+        expect(graph.getVertices()).toEqual([]);
     });
 
     it("I can add bidirectional edges", () => {
@@ -94,9 +94,9 @@ describe("Graphs tests", () => {
 
     it("I cannot add the same node", () => {
         graph.add(3);
-        expect(graph.getNodes()).toEqual([3]);
+        expect(graph.getVertices()).toEqual([3]);
         graph.add(3);
-        expect(graph.getNodes()).toEqual([3]);
+        expect(graph.getVertices()).toEqual([3]);
     });
 
     it("Connection exists", () => {
@@ -196,7 +196,7 @@ describe("Graphs tests", () => {
             { from: 3, to: 4, weight: 5 },
         ]);
 
-        const nodes = mst.getNodes();
+        const nodes = mst.getVertices();
         const firstNode = nodes[0];
         for (const node of nodes) {
             expect(
@@ -208,14 +208,35 @@ describe("Graphs tests", () => {
         }
     });
 
-    it("Minimum spanning tree will return undefined if there are unconnected vertices", ()=>{
+    it("Minimum spanning tree will return undefined if there are unconnected vertices", () => {
         graph.add(1);
         graph.add(2);
         graph.add(3);
 
-        graph.connect({from: 1, to: 2});
+        graph.connect({ from: 1, to: 2 });
         expect(graph.minimumSpanningTree()).toBe(undefined);
-        graph.connect({from: 1, to: 3});
+        graph.connect({ from: 1, to: 3 });
         expect(graph.minimumSpanningTree()?.getEdges().length).toBe(2);
-    })
+    });
+
+    it("Shortest path tests", () => {
+        graph.add(1);
+        graph.add(2);
+        graph.add(3);
+        graph.add(4);
+
+        graph.connect({ from: 1, to: 2, weight: 3 });
+        graph.connect({ from: 2, to: 3, weight: 1 });
+        graph.connect({ from: 3, to: 4, weight: 1 });
+        graph.connect({ from: 2, to: 10, weight: 10 });
+        expect(graph.shortestPath(1, 4)).toStrictEqual([1, 2, 3, 4]);
+
+        graph.connect({ from: 1, to: 4, weight: 10 });
+        expect(graph.shortestPath(1, 4)).toStrictEqual([1, 2, 3, 4]);
+
+        graph.add(5);
+        graph.connect({from: 1, to: 5, weight: 1});
+        graph.connect({from: 5, to: 4, weight: 1});
+        expect(graph.shortestPath(1, 4)).toStrictEqual([1, 5, 4]);
+    });
 });
