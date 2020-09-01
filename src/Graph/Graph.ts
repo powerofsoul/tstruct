@@ -19,6 +19,7 @@ export interface IGraph<T> {
     exists(node: T): boolean;
     getVertices(): T[];
     getEdges(): Connection<T>[];
+    getEdgesFor(vertex: T): Connection<T>[];
     minimumSpanningTree(): Graph<T>;
     shortestPath(from: T, to: T): T[];
 }

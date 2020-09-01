@@ -260,5 +260,20 @@ describe("Graphs tests", () => {
         expect(graph.shortestPath(3,4)).toEqual([]);
         graph.connect({from: 3, to: 4, weight: 1})
         expect(graph.shortestPath(3,4)).toEqual([3, 4]);
+    });
+
+    it("Get edges for vertex", () => {
+        graph.add(1);
+        graph.add(2);
+        graph.add(3);
+        graph.add(4);
+        graph.connect({from: 1, to: 4});
+        graph.connect({from: 2, to: 3});
+        graph.connect({from: 2, to: 4});
+
+        expect(graph.getEdgesFor(2)).toEqual([
+            {from: 2, to: 3},
+            {from: 2, to: 4}
+        ]);
     })
 });
