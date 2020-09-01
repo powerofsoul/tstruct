@@ -5,6 +5,7 @@ export interface IPriorityQueue<T> {
     enqueue(item: T): void;
     dequeue(): T;
     peek(): T;
+    toArray(): T[];
 
     readonly size: number;
     readonly isEmpty: boolean;
@@ -12,16 +13,19 @@ export interface IPriorityQueue<T> {
     [Symbol.iterator](): Iterator<T, any, undefined>;
 }
 
-export class PriorityQueue<T> implements IPriorityQueue<T>{
+export class PriorityQueue<T> implements IPriorityQueue<T> {
     private _heap: IHeap<T>;
 
-    constructor(getPriority: (value: T) => any, compareFunction = descendingCompareFunction) {
-        const heapCompareFunction = (e:T , e2: T) => {
+    constructor(
+        getPriority: (value: T) => any,
+        compareFunction = descendingCompareFunction
+    ) {
+        const heapCompareFunction = (e: T, e2: T) => {
             const ePriority = getPriority(e);
             const e2Priority = getPriority(e2);
 
             return compareFunction(ePriority, e2Priority);
-        }
+        };
         this._heap = new Heap(heapCompareFunction);
     }
 
@@ -37,6 +41,15 @@ export class PriorityQueue<T> implements IPriorityQueue<T>{
         return this._heap.getRoot();
     }
 
+    public toArray(): T[] {
+        const result = [];
+        while(!this.isEmpty) {
+            result.push(this.dequeue());
+        }
+
+        return result;
+    }
+
     public get size() {
         return this._heap.size;
     }
@@ -48,5 +61,4 @@ export class PriorityQueue<T> implements IPriorityQueue<T>{
     [Symbol.iterator](): Iterator<T, any, undefined> {
         return this._heap[Symbol.iterator]();
     }
-
 }

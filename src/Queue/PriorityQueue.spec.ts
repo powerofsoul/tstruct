@@ -60,4 +60,21 @@ describe("Priority queue tests", () => {
         priorityQueue.dequeue();
         expect(priorityQueue.peek().name).toBe("Mihai");
     });
+
+    it("To array priority queue test", () => {
+        priorityQueue.enqueue({
+            name: "Florin",
+            severity: 3
+        });
+        priorityQueue.enqueue({
+            name: "Andu",
+            severity: 99
+        });
+        priorityQueue.enqueue({
+            name: "Mihai",
+            severity: 33
+        });
+
+        expect(priorityQueue.toArray().map(e=> e.severity)).toEqual([99, 33, 3]);
+    })
 });
