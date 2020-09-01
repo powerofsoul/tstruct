@@ -69,7 +69,7 @@ describe("Graphs tests", () => {
         expect(graph.getNodes()).toEqual([]);
         graph.connect({
             from: 3,
-            to: 99
+            to: 99,
         });
         expect(graph.getEdges()).toEqual([]);
         expect(graph.getNodes()).toEqual([]);
@@ -86,7 +86,8 @@ describe("Graphs tests", () => {
         });
 
         expect(graph.getEdges()).toEqual([
-            {from: 3, to: 4, bidirectional: true}, {from: 4, to: 3, bidirectional: true}
+            { from: 3, to: 4, bidirectional: true },
+            { from: 4, to: 3, bidirectional: true },
         ]);
     });
 
@@ -95,5 +96,56 @@ describe("Graphs tests", () => {
         expect(graph.getNodes()).toEqual([3]);
         graph.add(3);
         expect(graph.getNodes()).toEqual([3]);
-    })
+    });
+
+    it("Connection exists", () => {
+        graph.add(3);
+        graph.add(5);
+
+        expect(
+            graph.connectionExists({
+                from: 3,
+                to: 5,
+            })
+        ).toBe(false);
+
+        graph.add(6);
+        graph.connect({
+            from: 5,
+            to: 6,
+        });
+
+        expect(
+            graph.connectionExists({
+                from: 3,
+                to: 5,
+            })
+        ).toBe(false);
+
+        expect(
+            graph.connectionExists({
+                from: 5,
+                to: 6,
+            })
+        ).toBe(true);
+
+        expect(
+            graph.connectionExists({
+                from: 6,
+                to: 5,
+            })
+        ).toBe(false);
+
+        graph.connect({
+            from: 3,
+            to: 5,
+        });
+
+        expect(
+            graph.connectionExists({
+                from: 3,
+                to: 6,
+            })
+        ).toBe(true);
+    });
 });

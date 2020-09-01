@@ -8,6 +8,7 @@ export interface Connection<T> {
 export interface IGraph<T> {
     add(node: T): void;
     connect(connection: Connection<T>): void;
+    connectionExists(connection: Connection<T>): boolean;
     exists(node: T): boolean;
     getNodes(): T[];
     getEdges(): Connection<T>[];
@@ -46,6 +47,26 @@ export class Graph<T> implements IGraph<T> {
 
     public exists(node: T): boolean {
         return this._adjacencyList.has(node);
+    }
+
+    public connectionExists(connection: Connection<T>): boolean {
+        const check = (currentLocation: T, haveBeenHere: T[] = []) => {
+            if(haveBeenHere.includes(currentLocation)) return false;
+
+            if (connection.to == currentLocation) {
+                return true;
+            }
+
+            for(let edge of this._adjacencyList.get(currentLocation).values()) {
+                if(check(edge.to, [...haveBeenHere, currentLocation])){
+                    return true;
+                };
+            }
+
+            return false;
+        };
+
+        return check(connection.from);
     }
 
     public getNodes(): T[] {
