@@ -67,7 +67,7 @@ export class Graph<T> implements IGraph<T> {
                 return true;
             }
 
-            for (let edge of this._adjacencyList
+            for (const edge of this._adjacencyList
                 .get(currentLocation)
                 .values()) {
                 if (check(edge.to, [...haveBeenHere, currentLocation])) {
@@ -83,7 +83,7 @@ export class Graph<T> implements IGraph<T> {
 
     public getNodes(): T[] {
         const result = [];
-        for (var e of this._adjacencyList.keys()) {
+        for (const e of this._adjacencyList.keys()) {
             result.push(e);
         }
 
@@ -96,8 +96,8 @@ export class Graph<T> implements IGraph<T> {
             ascendingCompareFunction
         );
 
-        for (let e of this._adjacencyList.values()) {
-            for (let edge of e.values()) {
+        for (const e of this._adjacencyList.values()) {
+            for (const edge of e.values()) {
                 result.enqueue(edge);
             }
         }
