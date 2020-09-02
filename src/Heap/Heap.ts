@@ -68,6 +68,11 @@ export class Heap<T> implements IHeap<T> {
     }
 
     public _rearrange(index: number) {
+        this._checkOnParent(index);
+        this._checkOnChildren(index);
+    }
+
+    private _checkOnParent(index: number) {
         let parentId = this.getParentIndex(index);
 
         while (
@@ -81,16 +86,10 @@ export class Heap<T> implements IHeap<T> {
             index = parentId;
             parentId = this.getParentIndex(index);
         }
+        return index;
     }
 
-    public remove(value: T): void {
-        let index = this._data.findIndex((v) => v == value);
-        if (index < 0) return;
-
-        const elem = this._data.pop();
-        if (index >= this.size) return;
-
-        this._data[index] = elem;
+    private _checkOnChildren(index: number) {
         while (index < this.size) {
             const children = this.getChildrenIndex(index);
             if (children[0] >= this.size && children[1] >= this.size) {
@@ -120,6 +119,18 @@ export class Heap<T> implements IHeap<T> {
                 index = children[1];
             }
         }
+
+        return index;
+    }
+
+    public remove(value: T): void {
+        let index = this._data.findIndex((v) => v == value);
+        if (index < 0) return;
+        
+        const elem = this._data.pop();
+        if (index >= this.size) return;
+        this._data[index] = elem;
+        this._checkOnChildren(index);
     }
 
     public toArray() {
