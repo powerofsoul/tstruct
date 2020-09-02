@@ -1,6 +1,6 @@
 {
   "name": "tstruct",
-  "version": "0.0.15",
+  "version": "0.1.0",
   "description": "Data structures & basic algorithms library",
   "main": "./dist/index.js",
   "scripts": {
