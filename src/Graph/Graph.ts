@@ -1,9 +1,6 @@
-import { UnionFind } from "../UnionFind/UnionFind";
+import { ascendingCompareFunction } from "../CompareFunction";
 import { PriorityQueue } from "../Queue/PriorityQueue";
-import {
-    descendingCompareFunction,
-    ascendingCompareFunction,
-} from "../CompareFunction";
+import { UnionFind } from "../UnionFind/UnionFind";
 
 export interface Connection<T> {
     from: T;
@@ -187,7 +184,7 @@ export class Graph<T> implements IGraph<T> {
         const vertices = this.getVertices();
         for (const vertex of vertices) {
             distances.set(vertex, {
-                distance: vertex == from ? 0 : Number.MAX_SAFE_INTEGER,
+                distance: vertex == from ? 0 : Infinity,
             });
         }
 
@@ -237,62 +234,67 @@ export class Graph<T> implements IGraph<T> {
     /**
      * Requires no negative weights
      * Complexity O(V + E log V)
-     * @param {T} from 
-     * @param {T} to 
+     * @param {T} from
+     * @param {T} to
      */
     public dijkstra(from: T, to: T) {
         if (this._hasNegativeWeights) {
-            throw "Dijkstra only works on graph with no negative weights";
+            throw "Dijkstra only works on graphs with no negative weights";
         }
 
-        type D = { distance: number; vertex: T; previous?: T };
-
-        const distances = new Map<T, D>();
-        const priorityQueue = new PriorityQueue<D>(
+        type Edge = { distance: number; vertex: T; previous?: T };
+        const edges = new Map<T, Edge>();
+        const edgesQueue = new PriorityQueue<Edge>(
             (e) => e?.distance,
             ascendingCompareFunction
         );
 
         const vertices = this.getVertices();
         for (const vertex of vertices) {
-            const distance = {
-                distance: vertex == from ? 0 : Number.MAX_SAFE_INTEGER,
+            const edge: Edge = {
+                distance: vertex == from ? 0 : Infinity,
                 vertex,
+                previous: null
             };
 
-            distances.set(vertex, distance);
-            priorityQueue.enqueue(distance);
+            edges.set(vertex, edge);
+            edgesQueue.enqueue(edge);
         }
 
-        while (!priorityQueue.isEmpty) {
-            const distance = priorityQueue.dequeue();
-            const edges = this.getEdgesFor(distance.vertex);
-            for (const e of edges) {
-                const newWeight = distances.get(e.from).distance + e.weight;
+        while (!edgesQueue.isEmpty) {
+            const edge = edgesQueue.dequeue();
+            const connectedEdges = this.getEdgesFor(edge.vertex);
+            
+            for (const e of connectedEdges) {
+                const newWeight = edges.get(e.from).distance + e.weight;
 
-                if (newWeight < distances.get(e.to).distance) {
-                    const obj = distances.get(e.to);
+                if (newWeight < edges.get(e.to).distance) {
+                    const obj = edges.get(e.to);
                     obj.distance = newWeight;
                     obj.previous = e.from;
-                    priorityQueue.rearrange(); // because we are changing the reference we need to make sure 
-                                               // priority queue will dequeue the correct element
+                    edgesQueue.rearrange(); // because we are changing the reference we need to make sure
+                    // priority queue will dequeue the correct element
                 }
             }
         }
 
-        let distance = distances.get(to);
+        let toEdge = edges.get(to);
+        const distance = toEdge.distance;
+
+        if (distance == Infinity) {
+            return {
+                distance,
+                path: [],
+            };
+        }
+
         const path = [];
-        while (distance?.previous != undefined) {
-            path.unshift(distance.previous);
-            distance = distances.get(distance.previous);
+        while (toEdge != null) {
+            path.unshift(toEdge.vertex);
+            toEdge = edges.get(toEdge.previous);
         }
-
-        if (path.length > 0) {
-            path.push(to);
-        }
-
         return {
-            distance: distance.distance,
+            distance: distance,
             path,
         };
     }

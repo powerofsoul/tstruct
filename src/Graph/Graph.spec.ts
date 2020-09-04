@@ -304,6 +304,6 @@ describe("Graphs tests", () => {
         graph.connect({ from: 1, to: 3, weight: -1 });
         graph.connect({ from: 3, to: 4, weight: 2 });
 
-        expect(() => graph.dijkstra(1, 4)).toThrow("Dijkstra only works on graph with no negative weights");
+        expect(() => graph.dijkstra(1, 4)).toThrow("Dijkstra only works on graphs with no negative weights");
     })
 });
